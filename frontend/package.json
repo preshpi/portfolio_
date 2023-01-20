@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "Precious",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,9 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "iconsax-react": "^0.0.8",
+    "prettier": "^2.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.7.1",
+    "react-lazy-load-image-component": "^1.5.6",
+    "react-multi-carousel": "^2.8.2",
     "react-router-dom": "^6.6.1"
   },
   "devDependencies": {

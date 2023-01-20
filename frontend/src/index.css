@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.active .navline{
+    width: 7rem;
+    
+}
+
+.active .navtext{
+    font-weight: 800;
+    color:rgb(67, 64, 64);
+}
+
+.navtext{
+    color:#5D5A5A;
+}
