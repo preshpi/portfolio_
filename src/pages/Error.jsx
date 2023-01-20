@@ -2,10 +2,14 @@ import React from "react";
 
 const Error = () => {
   return (
-  <div>
-            <h1 className='text-3xl font-bold'>PAGE NOT FOUND <code className='text-3xl font-bold'>404</code></h1>
-  </div>
-  )
+    <>
+      <img
+        src="https://res.cloudinary.com/dpokiomqq/image/upload/v1674247017/visuals-JpTY4gUviJM-unsplash_jxaqmn.jpg"
+        alt="404"
+        loading="lazy"
+      />
+    </>
+  );
 };
 
 export default Error;
