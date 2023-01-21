@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
     
   return (
-    <>
-      <ul className="grid items-center space-y-4">
+    <div>
+      <ul className="items-center space-y-4 lg:block md:block hidden">
         <li>
           <NavLink to="/about" className="flex items-center space-x-8">
             <div className="h-[2px] w-16 bg-primary dark:bg-gray navline"></div>
@@ -39,7 +39,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 
