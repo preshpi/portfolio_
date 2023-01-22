@@ -61,7 +61,7 @@ function App() {
         </div>
       </div>
 
-      {/* small screen */}
+      {/* small screen & tablet */}
       <div className="lg:hidden  min-h-screen block bg-resume dark:bg-bgblack transition-colors duration-300">
         <MobileNav />
         <Routes>
