@@ -2,7 +2,7 @@ import React from "react";
 
 const Heroproject = () => {
   return (
-    <div className=" ">
+    <>
       <h3 className="text-secondary dark:text-white  lg:text-[48px] lg:leading-[64px] font-[700]">
         <span className="text-primary dark:text-gray">
           I love working on fun
@@ -45,7 +45,7 @@ const Heroproject = () => {
           </span>
         </a>
       </div>
-    </div>
+    </>
   );
 };
 

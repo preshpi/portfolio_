@@ -4,7 +4,7 @@ import { DiCss3Full, DiJavascript1 } from "react-icons/di";
 const Skills = () => {
 
   return (
-    <div className="">
+    <>
       <div>
         <ul className="flex flex-wrap gap-[16px]">
           <li className="w-[200px] h-[96px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
@@ -117,7 +117,7 @@ const Skills = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </>
   );
 };
 

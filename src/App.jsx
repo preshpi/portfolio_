@@ -97,7 +97,7 @@ function App() {
       </div>
 
       {/* small screen */}
-      <div className="lg:hidden md:hidden block h-[100vh] bg-resume dark:bg-bgblack transition-colors duration-300">
+      <div className="lg:hidden md:hidden block bg-resume dark:bg-bgblack transition-colors duration-300">
         <MobileNav />
         <Routes>
           <Route path="/" element={<MobileAbout />} />
@@ -117,6 +117,9 @@ function App() {
             </div>
           )}
         </button>
+        <div className="flex justify-center items-center mt-[53px]">
+          <Socials />
+        </div>
       </div>
     </>
   );

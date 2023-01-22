@@ -2,7 +2,7 @@ import React from "react";
 import resume from '../../data/resume.pdf';
 const Heroskills = () => {
   return (
-    <div className="">
+    <>
       <h2 className="text-primary dark:text-gray text-[48px] leading-[64px] font-[700]">
         I work mostly with{" "}
         <span className="text-secondary dark:text-white">
@@ -22,7 +22,7 @@ const Heroskills = () => {
         </span>
       </p>
 
-      <div className="lg:mt-[32px]">
+      <div className="mt-[32px]">
         <a
           href="#_"
           className="relative w-[160px] h-[48px] group text-center  px-6 py-3 font-bold"
@@ -36,7 +36,7 @@ const Heroskills = () => {
           </span>
         </a>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const Herocontact = () => {
   return (
-    <div className="">
+    <>
       <h4 className="text-primary dark:text-gray  lg:text-[48px] lg:leading-[64px] font-[700] w-[459px]">
         Want to work with <span>me? let’s </span>{" "}
         <span className="text-secondary dark:text-white">Connect</span>
@@ -18,7 +18,7 @@ const Herocontact = () => {
         part-time, and contract frontend web development{" "}
         <span className="text-secondary dark:text-gray font-bold">jobs.</span>
       </p>
-    </div>
+    </>
   );
 };
 

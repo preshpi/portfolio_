@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="">
+    <>
       <form className="space-y-6" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -53,7 +53,7 @@ const Contact = () => {
         </button>
         <Toaster />
       </form>
-    </div>
+    </>
   );
 };
 

@@ -22,7 +22,7 @@ const Projects = () => {
         }) => (
           <div className="mb-[24px] ">
             <div key={id}>
-              <div className="rounded overflow-hidden shadow-lg w-80 h-full mx-auto bg-white dark:bg-secondary">
+              <div className="rounded lg:overflow-hidden shadow-lg w-80 h-full mx-auto bg-white dark:bg-secondary">
                 <LazyLoadImage
                   src={img}
                   alt={title}
