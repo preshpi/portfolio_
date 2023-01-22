@@ -55,17 +55,17 @@ function MobileNav() {
           </Link>
         </li>
         <li className="cursor-pointer font-[500] text-[#292929] dark:text-white mt-16 text-center ">
-          <Link onClick={handleClose} to="/mobileSkills">
+          <Link onClick={handleClose} to="/skills">
             SKILLS
           </Link>
         </li>
         <li className="cursor-pointer font-[500] text-[#292929] dark:text-white mt-16 text-center ">
-          <Link onClick={handleClose} to="/mobileProject">
+          <Link onClick={handleClose} to="/projects">
             PROJECT
           </Link>
         </li>
         <li className="cursor-pointer font-[500] text-[#292929] dark:text-white mt-16 text-center ">
-          <Link onClick={handleClose} to="/mobileContact">
+          <Link onClick={handleClose} to="/contact">
             CONTACT
           </Link>
         </li>
