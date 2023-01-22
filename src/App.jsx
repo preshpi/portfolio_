@@ -97,14 +97,26 @@ function App() {
       </div>
 
       {/* small screen */}
-      <div className="lg:hidden md:hidden block">
-        <MobileNav/>
-        <Routes>        
-            <Route path="mobileAbout" element={<MobileAbout />} />
-            <Route path="mobileProject" element={<MobileProject />} />
-            <Route path="mobileSkills" element={<MobileSkills />} />
-            <Route path="mobileContact" element={<MobileContact />} />
+      <div className="lg:hidden md:hidden block h-[100vh] bg-resume dark:bg-bgblack transition-colors duration-300">
+        <MobileNav />
+        <Routes>
+          <Route path="/" element={<MobileAbout />} />
+          <Route path="mobileAbout" element={<MobileAbout />} />
+          <Route path="mobileProject" element={<MobileProject />} />
+          <Route path="mobileSkills" element={<MobileSkills />} />
+          <Route path="mobileContact" element={<MobileContact />} />
         </Routes>
+        <button onClick={handleThemeSwitch} className="fixed p-2">
+          {theme === "dark" ? (
+            <div className="w-[48px] h-[48px] grid place-items-center justify-center items-center rounded-full shadow-sm bg-darkgrey text-white">
+              <BiSun />
+            </div>
+          ) : (
+            <div className="w-[48px] h-[48px] grid place-items-center justify-center items-center rounded-full shadow-sm bg-white text-darkgrey">
+              <BiMoon />
+            </div>
+          )}
+        </button>
       </div>
     </>
   );

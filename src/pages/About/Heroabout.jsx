@@ -8,11 +8,9 @@ function Heroabout() {
         <h1 className="text-primary dark:text-gray">Hello, I'm</h1>
         <span className="name dark:text-white">Precious Egwuenu</span>
       </div>
-      <p className="text-[16px] leading-[26px] text-para dark:text-gray h-[192px]  word-break mt-[24px] w-[543px]">
+      <p className="text-[16px] leading-[26px] text-para dark:text-gray h-[192px] word-break mt-[24px] w-[543px]">
         I am a <span className="text-secondary font-bold dark:text-white"> frontend developer </span> I have a strong background in creating visually appealing and
-        <span className="text-secondary font-bold dark:text-white">
-          {" "}
-          user-friendly web experiences.
+        <span className="text-secondary font-bold dark:text-white"> user-friendly web experiences.
         </span> I am motivated to find a role where I can challenge myself <span className="text-secondary font-bold dark:text-white">
           and provide value to website users.
         </span> I have actively sought internships such as <span className="text-secondary font-bold dark:text-white">
