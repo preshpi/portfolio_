@@ -25,7 +25,7 @@ function MobileNav() {
           {!nav ? (
             <HiOutlineMenuAlt3 className="text-[38px] cursor-pointer dark:text-white text-secondary" />
           ) : (
-            <CgClose className="text-[38px] cursor-pointer hover:text-[red] hidden" />
+            <CgClose className="hidden" />
           )}
         </div>
       </div>
@@ -45,7 +45,7 @@ function MobileNav() {
             {!nav ? (
               <HiOutlineMenuAlt3 className="text-[38px] dark:text-white text-secondary" />
             ) : (
-              <CgClose className="text-[38px] cursor-pointer hover:text-[red] transition-colors duration-300" />
+              <CgClose className="text-[38px] cursor-pointer dark:text-white text-secondary transition-colors duration-300" />
             )}
           </div>
         </div>

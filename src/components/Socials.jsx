@@ -1,10 +1,9 @@
 import React from "react";
 import { FaTiktok, FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
-import { VscGithubAlt } from "react-icons/vsc";
 const Socials = () => {
   return (
     <div>
-      <div className="mt-[34px]">
+      <div className="mt-[53px] flex lg:justify-start justify-center lg:items-start items-center">
         <ul className="flex space-x-6">
           <li className="border-primary border p-[2px]">
             <a

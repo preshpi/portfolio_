@@ -5,30 +5,30 @@ function MobileProject() {
   return (
     <div className="mt-[32px]">
       <div className="text-center grid items-center justify-center place-items-center">
-        <span className="text-secondary dark:text-white text-[24px] leading-[30px] font-[700] w-[350px]">
+        <span className="text-secondary dark:text-white font-[700] leading-[30px] md:leading-[50px] text-[24px] md:text-[35px]">
           <p className="text-primary dark:text-gray">I love working on fun</p>{" "}
           Projects
         </span>
 
-        <p className="text-[14px] leading-[24px] text-primary dark:text-white mt-[16px] w-[350px]">
+        <p className="text-[14px] md:text-[20px] leading-[24px] md:leading-[35px] text-para dark:text-gray word-break mt-[24px] md:w-[550px] w-[350px] whitespace-no-wrap">
           In my leisure time, I enjoy{" "}
-          <span className="text-secondary dark:text-gray font-bold">
+          <span className="text-secondary dark:text-white font-bold">
             experimenting
           </span>{" "}
           with and building things that I find personally{" "}
-          <span className="text-secondary dark:text-gray font-bold">
+          <span className="text-secondary dark:text-white font-bold">
             interesting
           </span>{" "}
           or{" "}
-          <span className="text-secondary dark:text-gray font-bold">
+          <span className="text-secondary dark:text-white font-bold">
             useful.
           </span>{" "}
           A few examples of these projects can be found on my{" "}
-          <span className="text-secondary dark:text-gray font-bold">
+          <span className="text-secondary dark:text-white font-bold">
             GitHub page,
           </span>{" "}
           where you can also find other{" "}
-          <span className="text-secondary dark:text-gray font-bold">
+          <span className="text-secondary dark:text-white font-bold">
             miscellaneous creations
           </span>{" "}
           I have worked on.
@@ -43,7 +43,7 @@ function MobileProject() {
             <span className="absolute inset-0 w-[160px] h-[48px] border-2 border-darkgrey dark:border-white translate-y-[6px] translate-x-[6px] transition duration-300 ease-out transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
             <span className="absolute inset-0 w-[160px] h-[48px] bg-darkgrey dark:bg-white text-resume"></span>
             <span className="text-resume dark:text-darkgrey text-[16px] text-center font-normal leading-[24px] relative group-hover:opacity-85">
-                View Github
+              View Github
             </span>
           </a>
         </div>
