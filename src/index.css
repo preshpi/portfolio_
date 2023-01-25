@@ -19,3 +19,9 @@ body{
 .navtext{
     color:#5D5A5A;
 }
+
+
+span{ 
+    display: inline-block
+}
+

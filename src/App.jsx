@@ -1,5 +1,5 @@
 import { React } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
@@ -22,44 +22,48 @@ import MobileProject from "./pages/Projects/MobileProject";
 import MobileSkills from "./pages/Skills/MobileSkills";
 
 import UseDarkmode from "./components/useDarkmode";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
- 
+  const location = useLocation();
+
   return (
     <>
       {/* Large screen */}
       <div className="items-center justify-center h-[100vh] bg-resume dark:bg-bgblack transition-colors duration-300 lg:block hidden">
         <div className="w-[80%] mx-auto">
-          <div className="flex items-end justify-end mb-5 pt-[15px]">
+          <div className="flex items-end justify-end mb-5 pt-[10px]">
             <UseDarkmode />
           </div>
-          <div className="flex gap-[50px]">
-            <div className="w-1/2 overflow-auto">
-              <div className="h-[60vh] w-full">
-                <Routes>
-                  <Route path="/" element={<Heroabout />} />
-                  <Route path="about" element={<Heroabout />} />
-                  <Route path="skills" element={<Heroskills />} />
-                  <Route path="projects" element={<Heroproject />} />
-                  <Route path="contact" element={<Herocontact />} />
-                </Routes>
-              </div>
+          <AnimatePresence>
+            <div className="flex gap-[50px]">
+              <div className="w-1/2 overflow-auto">
+                <div className="h-[60vh] w-full">
+                  <Routes location={location} key={location.key}>
+                    <Route path="/" element={<Heroabout />} />
+                    <Route path="about" element={<Heroabout />} />
+                    <Route path="skills" element={<Heroskills />} />
+                    <Route path="projects" element={<Heroproject />} />
+                    <Route path="contact" element={<Herocontact />} />
+                  </Routes>
+                </div>
 
-              <Navbar />
-              <Socials />
-            </div>
-            <div className="w-1/2 overflow-auto">
-              <div className="h-[65vh] w-full">
-                <Routes>
-                  <Route path="/" element={<About />} />
-                  <Route path="about" element={<About />} />
-                  <Route path="skills" element={<Skills />} />
-                  <Route path="projects" element={<Projects />} />
-                  <Route path="contact" element={<Contact />} />
-                </Routes>
+                <Navbar />
+                <Socials />
+              </div>
+              <div className="w-1/2 overflow-auto">
+                <div className="h-[65vh] w-full">
+                  <Routes location={location} key={location.key}>
+                    <Route path="/" element={<About />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="skills" element={<Skills />} />
+                    <Route path="projects" element={<Projects />} />
+                    <Route path="contact" element={<Contact />} />
+                  </Routes>
+                </div>
               </div>
             </div>
-          </div>
+          </AnimatePresence>
         </div>
       </div>
 

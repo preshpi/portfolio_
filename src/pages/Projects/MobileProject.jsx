@@ -1,9 +1,31 @@
 import React from "react";
 import Projects from "./Projects";
+import { motion } from "framer-motion";
 
 function MobileProject() {
+
+   const container = {
+     hidden: {
+       opacity: 0,
+     },
+     visible: {
+       opacity: 1,
+       transistion: { delay: 1.5, duration: 1.5 },
+     },
+     exit: {
+       opacity: 0,
+       transistion: { ease: "easeInOut" },
+     },
+   };
+   
   return (
-    <div className="mt-[32px]">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="mt-[32px]"
+    >
       <div className="text-center grid items-center justify-center place-items-center">
         <span className="text-secondary dark:text-white font-[700] leading-[30px] md:leading-[50px] text-[24px] md:text-[35px]">
           <p className="text-primary dark:text-gray">I love working on fun</p>{" "}
@@ -51,7 +73,7 @@ function MobileProject() {
       <div className="mt-[46px]">
         <Projects />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

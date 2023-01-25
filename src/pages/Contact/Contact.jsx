@@ -1,10 +1,14 @@
 import { React, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const Contact = () => {
    const [name, setName] = useState("");
    const [email, setEmail] = useState("");
    const [message, setMessage] = useState("");
+   const [isFocused, setIsFocused] = useState(false);
+  //  const [value, setValue] = useState("");
+
    const form = useRef();
 
    const handleSubmit = (e) => {
@@ -36,11 +40,29 @@ const Contact = () => {
      setMessage("");
    };
 
+    const container = {
+      hidden: {
+        opacity: 0,
+      },
+      visible: {
+        opacity: 1,
+        transistion: { delay: 1.5, duration: 1.5 },
+      },
+      exit: {
+        opacity: 0,
+        transistion: { ease: "easeInOut" },
+      },
+    };
 
 
   return (
-    <>
-      <form ref={form} className="space-y-6 mt-[34px]" onSubmit={handleSubmit}>
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      <form ref={form} className="space-y-6 mt-[34px] " onSubmit={handleSubmit}>
         <div className="items-center justify-center place-items-center grid gap-8">
           <input
             type="text"
@@ -85,7 +107,7 @@ const Contact = () => {
           </button>
         </div>
       </form>
-    </>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "antd";
-
+import { motion } from "framer-motion";
 const About = () => {
 
   const initals = [
@@ -83,20 +83,38 @@ const About = () => {
     },
   ];
 
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transistion: { delay: 1.5, duration: 1.5 },
+    },
+    exit: {
+      opacity: 0,
+      transistion: { ease: "easeInOut" },
+    },
+  };
 
   return (
-    <div className="w-full mt-[30px]">
-      <Carousel
-        autoplay
-        effect="fade"
-      >
+    <motion.div
+      className="w-full mt-[30px]"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      <Carousel autoplay effect="fade">
         {initals.map(({ id, text, data }) => {
           return (
             <div className="w-full" key={id}>
               <div className="relative w-[460px] group flex justify-center mx-auto">
                 <span className="absolute inset-0 w-[460px] h-[460px] border-2 border-darkgrey dark:border-white translate-y-4 translate-x-4"></span>
                 <div className="w-[460px] h-[460px] bg-darkgrey dark:bg-white flex items-center justify-center">
-                  <h1 className="text-[256px] font-[700] text-white dark:text-darkgrey">{text}</h1>
+                  <h1 className="text-[256px] font-[700] text-white dark:text-darkgrey">
+                    {text}
+                  </h1>
                 </div>
               </div>
               <div className="gap-x-[44px] gap-y-[5px] flex flex-wrap justify-center">
@@ -115,7 +133,7 @@ const About = () => {
           );
         })}
       </Carousel>
-    </div>
+    </motion.div>
   );
 };
 

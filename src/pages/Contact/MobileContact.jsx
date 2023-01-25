@@ -1,6 +1,7 @@
 import { React, useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 function MobileContact() {
   const [name, setName] = useState("");
@@ -39,8 +40,29 @@ function MobileContact() {
     setMessage("");
 
   };
+
+   const container = {
+     hidden: {
+       opacity: 0,
+     },
+     visible: {
+       opacity: 1,
+       transistion: { delay: 1.5, duration: 1.5 },
+     },
+     exit: {
+       opacity: 0,
+       transistion: { ease: "easeInOut" },
+     },
+   };
+
   return (
-    <div className="mt-[32px] mx-auto w-[80%]">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="mt-[32px] mx-auto w-[80%]"
+    >
       <div className="text-center grid items-center justify-center place-items-center">
         <span className="text-primary dark:text-gray leading-[30px] font-[700] md:leading-[50px] text-[24px] md:text-[35px]">
           Want to work with me?
@@ -120,7 +142,7 @@ function MobileContact() {
           }}
         />
       </form>
-    </div>
+    </motion.div>
   );
 }
 

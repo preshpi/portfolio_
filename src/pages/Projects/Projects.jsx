@@ -4,10 +4,33 @@ import { TbBrandGithub } from "react-icons/tb";
 import { AiFillEye } from "react-icons/ai";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { motion } from "framer-motion";
 
 const Projects = () => {
+  
+    const container = {
+      hidden: {
+        opacity: 0,
+      },
+      visible: {
+        opacity: 1,
+        transistion: { delay: 1.5, duration: 1.5 },
+      },
+      exit: {
+        opacity: 0,
+        transistion: { ease: "easeInOut" },
+      },
+    };
+
+
   return (
-    <div className="w-[80%] mx-auto">
+    <motion.div
+      className="w-[80%] mx-auto"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       {data.map(
         ({
           id,
@@ -21,7 +44,7 @@ const Projects = () => {
           viewLink,
         }) => (
           <div className="mb-[24px]">
-            <div
+            <motion.div
               className="rounded lg:overflow-hidden shadow-lg w-80 h-full mx-auto bg-white dark:bg-secondary"
               key={id}
             >
@@ -56,11 +79,11 @@ const Projects = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         )
       )}
-    </div>
+    </motion.div>
   );
 };
 

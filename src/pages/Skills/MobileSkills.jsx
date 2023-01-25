@@ -5,10 +5,32 @@ import { ImGit } from "react-icons/im"
 import { FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si"
 import { DiCss3Full, DiJavascript1 } from "react-icons/di";
+import { motion } from "framer-motion";
 
 function MobileSkills() {
+
+    const container = {
+      hidden: {
+        opacity: 0,
+      },
+      visible: {
+        opacity: 1,
+        transistion: { delay: 1.5, duration: 1.5 },
+      },
+      exit: {
+        opacity: 0,
+        transistion: { ease: "easeInOut" },
+      },
+    };
+    
   return (
-    <div className="mt-[32px]">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="mt-[32px] overflow-auto"
+    >
       <div className="grid justify-center items-center place-items-center text-center">
         <span className="text-primary dark:text-gray text-[24px] md:text-[35px] leading-[30px] md:leading-[50px] font-[700]">
           I work mostly with{" "}
@@ -64,7 +86,7 @@ function MobileSkills() {
         <ul className="grid grid-cols-2 md:grid-cols-3 gap-x-[24px] space-y-3">
           <li className="w-[163px] h-[77px] mt-3 bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
             <span className="flex gap-[16px] w-[101px] justify-evenly">
-              <ImGit className="w-[35px] h-[35px] fill-[#F05032]" />
+              <ImGit className="w-[35px] h-[35px] fill-[#F05032] hover:animate-spin duration-300 transition-all" />
               <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px]">
                 Git
               </p>
@@ -72,7 +94,7 @@ function MobileSkills() {
           </li>
           <li className="w-[163px] h-[77px]  bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
             <span className="flex gap-[16px] w-[101px] justify-evenly">
-              <FaReact className="w-[35px] h-[35px] fill-[#60DAFB]" />
+              <FaReact className="w-[35px] h-[35px] fill-[#60DAFB] hover:animate-spin duration-300 transition-all" />
               <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px]">
                 React
               </p>
@@ -80,7 +102,7 @@ function MobileSkills() {
           </li>
           <li className="w-[163px] h-[77px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
             <span className="flex gap-[16px] w-[101px] justify-evenly">
-              <SiTailwindcss className="w-[35px] h-[35px] fill-[#07B7D4]" />
+              <SiTailwindcss className="w-[35px] h-[35px] fill-[#07B7D4] hover:animate-spin duration-300 transition-all" />
               <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white">
                 Tailwind
               </p>
@@ -89,7 +111,7 @@ function MobileSkills() {
           <li className="w-[163px] h-[77px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
             <span className="flex gap-[16px] w-[101px] justify-evenly">
               <span className="bg-[#F16529] rounded-md">
-                <IoLogoHtml5 className="w-[35px] h-[35px] fill-white " />
+                <IoLogoHtml5 className="w-[35px] h-[35px] fill-white  hover:animate-spin duration-300 transition-all" />
               </span>
               <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px]">
                 HTML
@@ -99,7 +121,7 @@ function MobileSkills() {
           <li className="w-[163px] h-[77px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
             <span className="flex gap-[16px] w-[129px] justify-evenly">
               <span className="bg-[#2965F1] rounded-md">
-                <DiCss3Full className="w-[35px] h-[35px] fill-white" />
+                <DiCss3Full className="w-[35px] h-[35px] fill-white hover:animate-spin duration-300 transition-all" />
               </span>
               <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px]">
                 CSS
@@ -109,7 +131,7 @@ function MobileSkills() {
           <li className="w-[163px] h-[77px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
             <span className="flex gap-[16px]">
               <span className="bg-[#F7DF1E] w-[35px] h-[35px] flex justify-end items-end rounded-md">
-                <DiJavascript1 className=" w-[25px] h-[25px]" />
+                <DiJavascript1 className=" w-[25px] h-[25px] hover:animate-spin duration-300 transition-all" />
               </span>
               <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px]">
                 JavaScript
@@ -160,7 +182,7 @@ function MobileSkills() {
           </li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
