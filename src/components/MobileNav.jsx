@@ -100,7 +100,7 @@ function MobileNav() {
         <div className="ml-auto pt-2 w-[40px]">
           <CgClose
             onClick={handleClose}
-            className="text-[38px] cursor-pointer dark:text-white text-[red] transition-colors duration-300"
+            className="text-[38px] cursor-pointer dark:text-white text-black transition-colors duration-300"
           />
         </div>
 
