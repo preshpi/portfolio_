@@ -25,8 +25,9 @@ const Skills = () => {
       initial="hidden"
       animate="visible"
       exit="exit"
+      className="flex justify-center items-center"
     >
-      <ul className="flex flex-wrap gap-[16px]">
+      <ul className="grid grid-cols-2 gap-x-[24px] space-y-3  justify-center items-center">
         <li className="w-[200px] h-[96px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
           <span className="flex gap-[16px]">
             <img

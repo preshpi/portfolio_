@@ -59,7 +59,7 @@ function MobileAbout() {
         </p>
       </div>
 
-      <div className="mt-[24px] mb-[180px] flex justify-center items-center">
+      <div className="mt-[24px] mb-[140px] flex justify-center items-center">
         <a
           href={resume}
           target="_blank"

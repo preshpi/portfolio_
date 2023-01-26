@@ -62,7 +62,7 @@ const Contact = () => {
       animate="visible"
       exit="exit"
     >
-      <form ref={form} className="space-y-6 mt-[34px] " onSubmit={handleSubmit}>
+      <form ref={form} className="space-y-6" onSubmit={handleSubmit}>
         <div className="items-center justify-center place-items-center grid gap-8">
           <input
             type="text"

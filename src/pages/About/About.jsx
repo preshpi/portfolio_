@@ -99,13 +99,13 @@ const About = () => {
 
   return (
     <motion.div
-      className="w-full mt-[30px]"
+      className="w-full"
       variants={container}
       initial="hidden"
       animate="visible"
       exit="exit"
     >
-      <Carousel autoplay effect="fade">
+      <Carousel autoplay effect="fade" dots={false}>
         {initals.map(({ id, text, data }) => {
           return (
             <div className="w-full" key={id}>

@@ -31,14 +31,14 @@ function App() {
     <>
       {/* Large screen */}
       <div className="items-center justify-center h-[100vh] bg-resume dark:bg-bgblack transition-colors duration-300 lg:block hidden">
-        <div className="w-[80%] mx-auto">
+        <div className="max-w-screen-xl w-[80%] mx-auto h-[100%]">
           <div className="flex items-end justify-end mb-5 pt-[10px]">
             <UseDarkmode />
           </div>
-          <AnimatePresence>
-            <div className="flex gap-[50px]">
-              <div className="w-1/2 overflow-auto">
-                <div className="h-[60vh] w-full">
+          <div className="h-[90%] flex items-center justify-center gap-[20px]">
+            <AnimatePresence>
+              <div className="w-1/2 overflow-auto  h-[100%]">
+                <>
                   <Routes location={location} key={location.key}>
                     <Route path="/" element={<Heroabout />} />
                     <Route path="about" element={<Heroabout />} />
@@ -46,13 +46,14 @@ function App() {
                     <Route path="projects" element={<Heroproject />} />
                     <Route path="contact" element={<Herocontact />} />
                   </Routes>
-                </div>
-
-                <Navbar />
-                <Socials />
+                  <div className="mt-[70px]">
+                    <Navbar />
+                    <Socials />
+                  </div>
+                </>
               </div>
-              <div className="w-1/2 overflow-auto">
-                <div className="h-[65vh] w-full">
+              <div className="w-1/2 overflow-auto h-[100%]">
+                <>
                   <Routes location={location} key={location.key}>
                     <Route path="/" element={<About />} />
                     <Route path="about" element={<About />} />
@@ -60,10 +61,10 @@ function App() {
                     <Route path="projects" element={<Projects />} />
                     <Route path="contact" element={<Contact />} />
                   </Routes>
-                </div>
+                </>
               </div>
-            </div>
-          </AnimatePresence>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
 
