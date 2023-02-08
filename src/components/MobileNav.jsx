@@ -65,7 +65,7 @@ function MobileNav() {
   };
 
   return (
-    <div className="w-[100%] h-[80px] z-10">
+    <div className="w-[100%] h-[80px] z-10 relative top-0">
       <div className="flex justify-between items-center pt-4 p-2">
         <h1 className="font-[700] text-[24px] leading-[30.62px] text-secondary">
           <Link

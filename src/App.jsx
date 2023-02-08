@@ -31,7 +31,7 @@ function App() {
     <>
       {/* Large screen */}
       <div className="items-center justify-center h-[100vh] bg-resume dark:bg-bgblack transition-colors duration-300 lg:block hidden">
-        <div className="max-w-screen-xl w-[80%] mx-auto h-[100%]">
+        <div className="max-w-screen-xl w-[85%] mx-auto h-[100%]">
           <div className="flex items-end justify-end mb-5 pt-[10px]">
             <UseDarkmode />
           </div>
@@ -69,7 +69,7 @@ function App() {
       </div>
 
       {/* small screen & tablet */}
-      <div className="lg:hidden  min-h-screen block bg-resume dark:bg-bgblack transition-colors duration-300">
+      <div className="lg:hidden block min-h-[100vh] bg-resume dark:bg-bgblack transition-colors duration-300">
         <MobileNav />
         <Routes>
           <Route path="/" element={<MobileAbout />} />
@@ -78,7 +78,6 @@ function App() {
           <Route path="skills" element={<MobileSkills />} />
           <Route path="contact" element={<MobileContact />} />
         </Routes>
-        <Socials />
         <Footer />
       </div>
     </>

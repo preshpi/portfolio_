@@ -58,7 +58,7 @@ const Socials = () => {
 
   return (
     <div>
-      <div className="mt-[53px] flex lg:justify-start justify-center lg:items-start items-center">
+      <div className="mt-[45px] flex lg:justify-start justify-center lg:items-start items-center">
         <motion.ul 
           variants={socialcontainer}
           initial="hidden"

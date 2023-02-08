@@ -48,7 +48,7 @@ function Heroabout() {
         })}
       </p>
 
-      <p className="text-[16px] leading-[26px] text-para dark:text-gray h-[192px] word-break mt-[24px] w-[543px]">
+      <p className="text-[16px] leading-[26px] text-para dark:text-gray h-[192px] word-break mt-[24px] w-[500px]">
         I am a{" "}
         <span className="text-secondary font-bold dark:text-white">
           {" "}

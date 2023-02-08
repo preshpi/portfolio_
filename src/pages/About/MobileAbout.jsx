@@ -23,7 +23,7 @@ function MobileAbout() {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="mt-[32px] h-[100vw]"
+      className="mt-[32px]  h-[75vh]"
     >
       <div className="text-center grid items-center justify-center place-items-center">
         <div className="grid items-center justify-center text-center font-[700] leading-[30px] md:leading-[50px] text-[24px] md:text-[35px]">
@@ -31,7 +31,7 @@ function MobileAbout() {
           <span className="name dark:text-white">Precious Egwuenu</span>
         </div>
 
-        <p className="text-[14px] md:text-[20px] leading-[24px] md:leading-[35px] text-para dark:text-gray word-break mt-[24px] md:w-[550px] w-[350px] whitespace-no-wrap">
+        <p className="m-5 text-[14px] md:text-[20px] leading-[24px] md:leading-[35px] text-para dark:text-gray word-break mt-[24px] md:w-3/5 whitespace-no-wrap">
           I am a{" "}
           <span className="text-secondary font-bold dark:text-white">
             {" "}
@@ -59,7 +59,7 @@ function MobileAbout() {
         </p>
       </div>
 
-      <div className="mt-[34px] flex justify-center items-center">
+      <div className="mt-[10%] md:mt-[5%] flex justify-center items-center">
         <a
           href={resume}
           target="_blank"
