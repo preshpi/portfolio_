@@ -15,28 +15,32 @@ function MobileNav() {
     {
       id: 1,
       text: "ABOUT",
-      path: "/"
+      path: "/",
     },
     {
       id: 2,
       text: "SKILLS/TOOLS",
-      path: "/skills"
+      path: "/skills",
     },
     {
       id: 3,
       text: "PROJECTS",
-      path: "/projects"
+      path: "/projects",
     },
     {
       id: 4,
       text: "CONTACT",
-      path: "contact"
+      path: "contact",
     },
     {
       id: 5,
-      icon: <UseDarkmode />
-    }
-  ]
+      blog: "BLOG",
+    },
+    {
+      id: 6,
+      icon: <UseDarkmode />,
+    },
+  ];
 
   const sidebar = {
        open: {
@@ -106,7 +110,7 @@ function MobileNav() {
 
         
         {
-          list.map(({id, text, path, icon}) => {
+          list.map(({id, text, path, icon, blog}) => {
             return (
               <motion.li
                 variants={listAnimate}
@@ -117,6 +121,9 @@ function MobileNav() {
                 <Link onClick={handleClose} to={path}>
                   {text}
                 </Link>
+                <a href="https://preshblog.vercel.app/" target="_blank">
+                  {blog}
+                </a>
                 {icon}
               </motion.li>
             );
