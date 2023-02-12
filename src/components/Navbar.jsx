@@ -1,5 +1,5 @@
 import { React } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
     
   return (
@@ -30,15 +30,16 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <Link
-            to="/https://preshblog.vercel.app/"
+          <a
+            href="https://preshblog.vercel.app/"
+            target="_blank"
             className="flex items-center space-x-8"
           >
             <div className="h-[2px] w-16 bg-primary dark:bg-gray navline"></div>
             <p className="lg:text-[16px] lg:leading-[20.42px] font-[700] mx-3  uppercase navtext">
               Blog
             </p>
-          </Link>
+          </a>
         </li>
       </ul>
     </div>
