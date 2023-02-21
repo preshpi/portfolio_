@@ -134,7 +134,7 @@ function MobileContact() {
           toastOptions={{
             duration: 3000,
             iconTheme: {
-              primary: "red",
+              primary: "green",
               secondary: "white",
             },
             role: "status",

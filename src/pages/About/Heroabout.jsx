@@ -54,10 +54,8 @@ function Heroabout() {
           {" "}
           frontend developer{" "}
         </span>{" "}
-        I have a strong background in creating visually appealing and
-        <span className="text-secondary font-bold dark:text-white">
-          {" "}
-          user-friendly web experiences.
+        I have a strong background in creating visually appealing and <span className="text-secondary font-bold dark:text-white">{" "}
+        user-friendly web experiences.
         </span>{" "}
         I am motivated to find a role where I can challenge myself{" "}
         <span className="text-secondary font-bold dark:text-white">

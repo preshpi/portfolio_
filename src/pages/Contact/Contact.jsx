@@ -1,23 +1,21 @@
 import { React, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import swal from "sweetalert";
 
 const Contact = () => {
    const [name, setName] = useState("");
    const [email, setEmail] = useState("");
    const [message, setMessage] = useState("");
-   const [isFocused, setIsFocused] = useState(false);
-  //  const [value, setValue] = useState("");
-
    const form = useRef();
 
    const handleSubmit = (e) => {
      e.preventDefault();
      if (name.length === 0 || email.length === 0 || message.length === 0) {
-      alert("error")
-     } else {
-      alert("success");
+     swal("Please complete filling the form", "error");
 
+     } else {
+      swal("Successful!", "I'll get back to you!", "success");
        emailjs
          .sendForm(
            "service_aakyhrk",

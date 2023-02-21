@@ -40,17 +40,17 @@ const Socials = () => {
       icon: <FaLinkedinIn />,
     },
     {
-      id: 1,
+      id: 2,
       link: "https://github.com/preshpi",
       icon: <FaGithub />,
     },
     {
-      id: 2,
+      id: 3,
       link: "https://twitter.com/preshypie",
       icon: <FaTwitter />,
     },
     {
-      id: 3,
+      id: 4,
       link: "https://www.tiktok.com/@tech.girl4?lang=en",
       icon: <FaTiktok />,
     },
@@ -58,7 +58,7 @@ const Socials = () => {
 
   return (
     <div>
-      <div className="mt-[45px] flex lg:justify-start justify-center lg:items-start items-center">
+      <div className="mt-[35px] flex lg:justify-start justify-center lg:items-start items-center">
         <motion.ul 
           variants={socialcontainer}
           initial="hidden"
