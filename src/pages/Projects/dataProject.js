@@ -45,13 +45,24 @@ export const data = [
   },
   {
     id: 5,
-    img: "https://res.cloudinary.com/dgtc1iood/image/upload/v1673983858/React-App_ewftyh.png",
-    title: "Linktree",
-    subtitle: "Tools for getting and sharing links of different websites",
-    language: "React + Tailwind",
+    img: "https://res.cloudinary.com/dpokiomqq/image/upload/v1679850196/Regiz_-_Alpha_Digital_Technology_1_kwkghz.png",
+    title: "Regiz",
     code: "Code",
-    codeLink: "https://github.com/preshpi/linktree",
-    viewLink: "https://linktree-azure.vercel.app/",
+
+    subtitle:
+      "A generation alpha technology project that focuses on digital documents minting, authentication, authentication analysis software, social networking.",
+    language: "React + Tailwind + vite",
+    viewLink: "https://regiz.io/",
+    view: "View Site",
+  },
+  {
+    id: 6,
+    img: "https://res.cloudinary.com/dpokiomqq/image/upload/v1679850486/preshdev_mvgxyf.png",
+    title: "preshDev",
+    code: "Code",
+    subtitle: "My Portfolio website",
+    language: "React + Tailwind + vite",
+    viewLink: "https://preciousegwuenu.dev/",
     view: "View Site",
   },
 ];

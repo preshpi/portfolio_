@@ -1,6 +1,13 @@
 import React from "react";
-import { FaTiktok, FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion"
+import {
+  FaTiktok,
+  FaLinkedinIn,
+  FaTwitter,
+  FaGithub,
+  FaShareAlt,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FloatButton } from "antd";
 const Socials = () => {
   const socialcontainer = {
     hidden: {
@@ -13,76 +20,43 @@ const Socials = () => {
       transition: {
         type: "spring",
         stiffness: 50,
-        delay: 1,
         ease: "easeInOut",
       },
     },
   };
 
-  const icons = {
-    hidden: {
-      opacity: 2,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-    },
-    transition: {
-      delay: 0.5,
-      ease: "easeInOut",
-    },
-  };
 
-  const items = [
-    {
-      id: 1,
-      link: "https://www.linkedin.com/in/preshpi-22/",
-      icon: <FaLinkedinIn />,
-    },
-    {
-      id: 2,
-      link: "https://github.com/preshpi",
-      icon: <FaGithub />,
-    },
-    {
-      id: 3,
-      link: "https://twitter.com/preshypie",
-      icon: <FaTwitter />,
-    },
-    {
-      id: 4,
-      link: "https://www.tiktok.com/@tech.girl4?lang=en",
-      icon: <FaTiktok />,
-    },
-  ];
 
   return (
-    <div>
-      <div className="mt-[35px] flex lg:justify-start justify-center lg:items-start items-center">
-        <motion.ul 
+    <div className="mt-[35px] grid lg:justify-start justify-center  lg:items-start items-center">
+      <FloatButton.Group
+        trigger="click"
+        type="default"
+        style={{
+          right: 24,
+        }}
+        icon={<FaShareAlt />}
+      >
+        <motion.div
           variants={socialcontainer}
           initial="hidden"
           animate="animate"
-          className="flex space-x-6">
-         
-            {
-              items.map(({icon, id, link}) => {
-                return (
-                  <motion.li 
-                    className="border-primary border p-[2px] lg:hover:animate-bounce transition-all duration-300 animate-pulse" key={id}>
-                    <a
-                      href={link}
-                      target="_blank"
-                      className="bg-black2 flex cursor-pointer justify-center items-center w-[35px] h-[35px]"
-                    >
-                      <span className="text-white text-[30px]"> {icon}</span>
-                    </a>
-                  </motion.li>
-                );
-              })
-            }
-        </motion.ul>
-      </div>
+          className="gap-5 grid"
+        >
+          <a href="https://www.linkedin.com/in/preshpi-22/" target="_blank">
+            <FloatButton icon={<FaLinkedinIn />} />
+          </a>
+          <a href="https://github.com/preshpi" target="_blank">
+            <FloatButton icon={<FaGithub />} />
+          </a>
+          <a href="https://twitter.com/preshypie" target="_blank">
+            <FloatButton icon={<FaTwitter />} />
+          </a>
+          <a href="https://www.tiktok.com/@tech.girl4?lang=en" target="_blank">
+            <FloatButton icon={<FaTiktok />} />
+          </a>
+        </motion.div>
+      </FloatButton.Group>
     </div>
   );
 };

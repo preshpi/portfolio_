@@ -4,11 +4,19 @@ function Footer() {
   return (
     <>
       <Socials />
-    <div className="mt-5 flex justify-center items-center border-t dark:border-resume border-darkgrey">
-      <p className="text-darkgrey dark:text-resume py-2 px-2">© 2023 PreshDev</p>
-    </div>
+      <div className="mt-5 flex flex-col justify-center items-center border-t dark:border-resume border-darkgrey">
+        <p className="text-darkgrey dark:text-resume py-2 px-2">
+          © 2023 PreshDev.
+        </p>
+        <p className="text-darkgrey dark:text-resume py-2 px-2">
+          Designed by{" "}
+          <span className="underline">
+            {" "}
+            <a href="https://www.behance.net/olatunjisaac-j">@JolaOluwa</a>
+          </span>
+        </p>
+      </div>
     </>
-   
   );
 }
 

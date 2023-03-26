@@ -2,8 +2,10 @@ import React from "react";
 import resume from "../../data/resume.pdf";
 import { IoLogoHtml5 } from "react-icons/io";
 import { ImGit } from "react-icons/im"
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiTypescript, SiTailwindcss } from "react-icons/si";
+import { IoLogoSass } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si"
 import { DiCss3Full, DiJavascript1 } from "react-icons/di";
 import { motion } from "framer-motion";
 
@@ -138,24 +140,31 @@ function MobileSkills() {
               </p>
             </span>
           </li>
+          <li className="w-[163px] h-[77px] bg-white dark:bg-darkgrey gap-[14px] flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
+              <span className="w-[35px] h-[35px] flex  justify-center items-center rounded-md">
+                <SiTypescript className="w-[25px] h-[25px] fill-[#3074C0] hover:animate-spin duration-300 transition-all" />
+              </span>
+              <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px]">
+                TypeScript
+              </p>
+          </li>
           <li className="w-[163px] h-[77px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
             <span className="flex gap-[16px]">
-              <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px] font-[500]">
-                Team-Work
+              <span className="w-[35px] h-[35px] flex justify-center items-center rounded-md">
+                <IoLogoSass className="fill-[#C76494] w-[25px] h-[25px] hover:animate-spin duration-300 transition-all" />
+              </span>
+              <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px]">
+                Sass
               </p>
             </span>
           </li>
           <li className="w-[163px] h-[77px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
             <span className="flex gap-[16px]">
-              <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px] font-[500]">
-                Creative Thinking
-              </p>
-            </span>
-          </li>
-          <li className="w-[163px] h-[77px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
-            <span className="flex gap-[16px]">
-              <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px] font-[500]">
-                Debugging
+              <span className="w-[35px] h-[35px] flex justify-center items-center rounded-md">
+                <TbBrandNextjs className=" w-[25px] h-[25px] hover:animate-spin duration-300 transition-all" />
+              </span>
+              <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px]">
+                NextJS
               </p>
             </span>
           </li>

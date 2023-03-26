@@ -31,10 +31,10 @@ function App() {
     <>
       {/* Large screen */}
       <div className="items-center justify-center h-[100vh] bg-resume dark:bg-bgblack transition-colors duration-300 lg:block hidden">
-        <div className="max-w-screen-xl w-[85%] mx-auto h-[100%]">
-          <div className="flex items-end justify-end mb-5 pt-[10px]">
+        <div className="max-w-screen-xl w-[85%] mx-auto h-[100%] justify-center items-center ">
+           <div className="flex items-end justify-end mb-5 pt-[10px]">
             <UseDarkmode />
-          </div>
+          </div> 
           <div className="h-[90%] flex items-center justify-center gap-[20px]">
             <AnimatePresence>
               <div className="w-1/2 overflow-auto  h-[100%]">
