@@ -32,9 +32,6 @@ const Socials = () => {
       <FloatButton.Group
         trigger="click"
         type="default"
-        style={{
-          right: 24,
-        }}
         icon={<FaShareAlt />}
       >
         <motion.div
@@ -44,16 +41,28 @@ const Socials = () => {
           className="gap-5 grid"
         >
           <a href="https://www.linkedin.com/in/preshpi-22/" target="_blank">
-            <FloatButton icon={<FaLinkedinIn />} />
+            <FloatButton
+              icon={<FaLinkedinIn />}
+              className="dark:bg-white hover:opacity-75"
+            />
           </a>
           <a href="https://github.com/preshpi" target="_blank">
-            <FloatButton icon={<FaGithub />} />
+            <FloatButton
+              icon={<FaGithub />}
+              className="dark:bg-white hover:opacity-75"
+            />
           </a>
           <a href="https://twitter.com/preshypie" target="_blank">
-            <FloatButton icon={<FaTwitter />} />
+            <FloatButton
+              icon={<FaTwitter />}
+              className="dark:bg-white hover:opacity-75"
+            />
           </a>
           <a href="https://www.tiktok.com/@tech.girl4?lang=en" target="_blank">
-            <FloatButton icon={<FaTiktok />} />
+            <FloatButton
+              icon={<FaTiktok />}
+              className="dark:bg-white hover:opacity-75"
+            />
           </a>
         </motion.div>
       </FloatButton.Group>

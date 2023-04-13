@@ -8,7 +8,6 @@ body{
 
 .active .navline{
     width: 7rem;
-    
 }
 
 .active .navtext{
@@ -19,7 +18,6 @@ body{
 .navtext{
     color:#5D5A5A;
 }
-
 
 span{ 
     display: inline-block

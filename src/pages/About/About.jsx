@@ -122,7 +122,7 @@ const About = () => {
                   return (
                     <div
                       key={id}
-                      className="w-[64px] h-[64px] bg-white text-black2 font-[700] text-[24px] mt-[35px] leading-[30.62px] grid justify-center items-center place-items-center"
+                      className="w-[64px] h-[64px]  bg-white text-black2 font-[700] text-[24px] mt-[35px] leading-[30.62px] grid justify-center items-center place-items-center"
                     >
                       <p>{txt}</p>
                     </div>

@@ -60,7 +60,7 @@ const Contact = () => {
       animate="visible"
       exit="exit"
     >
-      <form ref={form} className="space-y-6" onSubmit={handleSubmit}>
+      <form ref={form} className="space-y-6 h-[500px] flex items-center justify-center" onSubmit={handleSubmit}>
         <div className="items-center justify-center place-items-center grid gap-8">
           <input
             type="text"
@@ -88,7 +88,7 @@ const Contact = () => {
             placeholder="Message"
             required
             onChange={(e) => setMessage(e.target.value)}
-            className="border-[#2D2929] dark:border-white border-[3px] p-4 outline-none  w-[500px] h-[200px] text-[14px] bg-[#F2F2F2] dark:bg-bgblack dark:text-grey2"
+            className="border-[#2D2929] dark:border-white border-[3px] p-4 outline-none  w-[500px] h-[150px] text-[14px] bg-[#F2F2F2] dark:bg-bgblack dark:text-grey2"
           ></textarea>
 
           <button

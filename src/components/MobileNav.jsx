@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { CgClose } from "react-icons/cg";
 import UseDarkmode from "./useDarkmode";
@@ -56,20 +56,10 @@ function MobileNav() {
       },
   }
 
-  const listAnimate = {
-    hover: {
-      scale: 1.2,
-      textShadow: "0px 0px 8px rgb(255, 255, 255)",
-    },
-    transistion: {
-      type: "spring",
-      stiffness: 300,
-      delay: 0.5,
-    },
-  };
+
 
   return (
-    <div className="w-[100%] h-[80px] z-10 relative top-0">
+    <div className="w-[95%] mx-auto h-[80px] z-10 relative top-0">
       <div className="flex justify-between items-center pt-4 p-2">
         <h1 className="font-[700] text-[24px] leading-[30.62px] text-secondary">
           <Link
@@ -113,14 +103,12 @@ function MobileNav() {
           list.map(({id, text, path, icon, blog}) => {
             return (
               <motion.li
-                variants={listAnimate}
-                whileHover="hover"
                 key={id}
                 className="cursor-pointer font-[500] text-[#292929] dark:text-white mt-16 text-center "
               >
-                <Link onClick={handleClose} to={path}>
+                <NavLink onClick={handleClose} to={path}>
                   {text}
-                </Link>
+                </NavLink>
                 <a href="https://preshblog.vercel.app/" target="_blank">
                   {blog}
                 </a>

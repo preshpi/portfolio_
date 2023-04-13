@@ -23,7 +23,7 @@ function MobileAbout() {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="mt-[32px]  h-[75vh]"
+      className="mt-[32px] h-[65vh] md:h-[72vh] flex flex-col items-center justify-center"
     >
       <div className="text-center grid items-center justify-center place-items-center">
         <div className="grid items-center justify-center text-center font-[700] leading-[30px] md:leading-[50px] text-[24px] md:text-[35px]">
@@ -59,7 +59,7 @@ function MobileAbout() {
         </p>
       </div>
 
-      <div className="mt-[10%] md:mt-[5%] flex justify-center items-center">
+      <div className="mt-[10%] md:mt-[2%] flex justify-center items-center">
         <a
           href={resume}
           target="_blank"

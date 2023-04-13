@@ -25,7 +25,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="w-[80%] mx-auto"
+      className="w-[80%] mx-auto lg:overflow-auto lg:h-[600px]"
       variants={container}
       initial="hidden"
       animate="visible"

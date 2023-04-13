@@ -58,16 +58,7 @@ const Heroskills = () => {
         <span className="text-secondary font-bold dark:text-white">
           open source
         </span>{" "}
-        projects. My{" "}
-        <span className="text-secondary font-bold dark:text-white">
-          soft skills
-        </span>{" "}
-        have also contributed majorly to my{" "}
-        <span className="text-secondary font-bold dark:text-white">growth</span>{" "}
-        and abilities{" "}
-        <span className="text-secondary font-bold dark:text-white">
-          professionally.
-        </span>
+        projects.
       </p>
 
       <div className="mt-[32px]">

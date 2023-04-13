@@ -60,20 +60,12 @@ function Heroabout() {
         I am motivated to find a role where I can challenge myself{" "}
         <span className="text-secondary font-bold dark:text-white">
           and provide value to website users.
-        </span>{" "}
-        I have actively sought internships such as{" "}
-        <span className="text-secondary font-bold dark:text-white">
-          She Code Africa training (SCA)
-        </span>{" "}
-        HNG, ZURI,{" "}
-        <span className="text-secondary font-bold dark:text-white">
-          and many more to improve my skills.
-        </span>{" "}
+        </span>{" "}       
         I am excited to bring my knowledge and experience to a team and
         contribute to a company's success.
       </p>
 
-      <div className="mt-[42px]">
+      <div className="mt-[20px]">
         <a
           href={resume}
           target="_blank"

@@ -30,46 +30,45 @@ function App() {
   return (
     <>
       {/* Large screen */}
-      <div className="items-center justify-center h-[100vh] bg-resume dark:bg-bgblack transition-colors duration-300 lg:block hidden">
-        <div className="max-w-screen-xl w-[85%] mx-auto h-[100%] justify-center items-center ">
-           <div className="flex items-end justify-end mb-5 pt-[10px]">
-            <UseDarkmode />
-          </div> 
-          <div className="h-[90%] flex items-center justify-center gap-[20px]">
-            <AnimatePresence>
-              <div className="w-1/2 overflow-auto  h-[100%]">
-                <>
-                  <Routes location={location} key={location.key}>
-                    <Route path="/" element={<Heroabout />} />
-                    <Route path="about" element={<Heroabout />} />
-                    <Route path="skills" element={<Heroskills />} />
-                    <Route path="projects" element={<Heroproject />} />
-                    <Route path="contact" element={<Herocontact />} />
-                  </Routes>
-                  <div className="mt-[70px]">
-                    <Navbar />
-                    <Socials />
-                  </div>
-                </>
-              </div>
-              <div className="w-1/2 overflow-auto h-[100%]">
-                <>
-                  <Routes location={location} key={location.key}>
-                    <Route path="/" element={<About />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="skills" element={<Skills />} />
-                    <Route path="projects" element={<Projects />} />
-                    <Route path="contact" element={<Contact />} />
-                  </Routes>
-                </>
-              </div>
-            </AnimatePresence>
+
+      <div className="h-screen bg-resume dark:bg-bgblack transition-colors duration-300 lg:block hidden">
+        <div className="w-[97%] mx-auto h-14 flex items-end justify-end pt-4">
+          <UseDarkmode />
+          <Socials />
+        </div>
+        <div className="flex items-center justify-center">
+          <div className="flex w-[80%] h-[90vh] items-center justify-center">
+            <div className="w-1/2 overflow-auto">
+              <>
+                <Routes location={location} key={location.key}>
+                  <Route path="/" element={<Heroabout />} />
+                  <Route path="about" element={<Heroabout />} />
+                  <Route path="skills" element={<Heroskills />} />
+                  <Route path="projects" element={<Heroproject />} />
+                  <Route path="contact" element={<Herocontact />} />
+                </Routes>
+                <div className="mt-[70px]">
+                  <Navbar />
+                </div>
+              </>
+            </div>
+            <div className="w-1/2 overflow-auto">
+              <>
+                <Routes location={location} key={location.key}>
+                  <Route path="/" element={<About />} />
+                  <Route path="about" element={<About />} />
+                  <Route path="skills" element={<Skills />} />
+                  <Route path="projects" element={<Projects />} />
+                  <Route path="contact" element={<Contact />} />
+                </Routes>
+              </>
+            </div>
           </div>
         </div>
       </div>
 
       {/* small screen & tablet */}
-      <div className="lg:hidden block min-h-[100vh] bg-resume dark:bg-bgblack transition-colors duration-300">
+      <div className="lg:hidden block min-h-screen bg-resume dark:bg-bgblack transition-colors duration-300">
         <MobileNav />
         <Routes>
           <Route path="/" element={<MobileAbout />} />

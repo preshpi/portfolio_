@@ -43,9 +43,9 @@ const Skills = () => {
             </p>
           </span>
         </li>
-        <li className="w-[200px] h-[96px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
+        <li className="w-[200px] h-[96px] bg-white dark:bg-darkgrey group flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
           <span className="flex gap-[16px]">
-            <FaReact className="w-[35px] h-[35px] fill-[#60DAFB] animate-spin duration-300 transition-all" />
+            <FaReact className="w-[35px] h-[35px] fill-[#60DAFB] animate-spin group-hover:animate-none duration-300 transition-all" />
             <p className="flex justify-center items-center text-[16px] text-black2 dark:text-white leading-[24px]">
               React
             </p>
@@ -53,7 +53,7 @@ const Skills = () => {
         </li>
         <li className="w-[200px] h-[96px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
           <span className="flex gap-[16px]">
-            <SiTailwindcss className="w-[35px] h-[35px] fill-[#07B7D4] animate-spin duration-300 transition-all" />
+            <SiTailwindcss className="w-[35px] h-[35px] fill-[#07B7D4] duration-300 transition-all" />
             <p className="flex justify-center items-center text-[16px] text-black2 dark:text-white leading-[24px]">
               Tailwind
             </p>
@@ -91,7 +91,7 @@ const Skills = () => {
         </li>
         <li className="w-[200px] h-[96px] bg-white dark:bg-darkgrey gap-[16px] flex justify-center items-center hover:scale-95 shadow-md transition-all duration-300">
           <span className="w-[35px] h-[35px] flex justify-center items-center rounded-md">
-            <TbBrandNextjs className=" w-[25px] h-[25px]" />
+            <TbBrandNextjs className=" w-[25px] h-[25px] dark:text-white" />
           </span>
           <p className="flex justify-center items-center text-[16px] text-black2 dark:text-white leading-[24px]">
             Next JS
@@ -112,27 +112,6 @@ const Skills = () => {
           <p className="flex justify-center items-center text-[16px] text-black2 dark:text-white leading-[24px]">
             Sass
           </p>
-        </li>
-        <li className="w-[200px] h-[96px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
-          <span className="flex gap-[16px]">
-            <p className="flex justify-center items-center text-[16px] text-black2 dark:text-white leading-[24px] font-[500]">
-              Time Management
-            </p>
-          </span>
-        </li>
-        <li className="w-[200px] h-[96px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
-          <span className="flex gap-[16px]">
-            <p className="flex justify-center items-center text-[16px] text-black2 dark:text-white leading-[24px] font-[500]">
-              Communication
-            </p>
-          </span>
-        </li>
-        <li className="w-[200px] h-[96px] bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
-          <span className="flex gap-[16px]">
-            <p className="flex justify-center items-center text-[16px] text-black2 dark:text-white leading-[24px] font-[500]">
-              Design to Code
-            </p>
-          </span>
         </li>
       </ul>
     </motion.div>

@@ -43,11 +43,11 @@ function useDarkmode() {
     <div>
       <button onClick={handleThemeSwitch}>
         {theme === "dark" ? (
-          <div className="w-[48px] h-[48px] grid place-items-center justify-center items-center rounded-full drop-shadow-lg shadow-white bg-darkgrey text-white">
+          <div className="w-[40px] h-[40px] grid place-items-center justify-center items-center rounded-full drop-shadow-lg shadow-white bg-white text-darkgrey">
             <BiSun />
           </div>
         ) : (
-          <div className="w-[48px] h-[48px] grid place-items-center justify-center items-center rounded-full drop-shadow-lg shadow-darkgrey bg-white text-darkgrey">
+          <div className="w-[40px] h-[40px] grid place-items-center justify-center items-center rounded-full drop-shadow-lg shadow-darkgrey bg-white text-darkgrey">
             <BiMoon />
           </div>
         )}
