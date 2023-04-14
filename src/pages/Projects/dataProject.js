@@ -48,7 +48,6 @@ export const data = [
     img: "https://res.cloudinary.com/dpokiomqq/image/upload/v1679850196/Regiz_-_Alpha_Digital_Technology_1_kwkghz.png",
     title: "Regiz",
     code: "Code",
-
     subtitle:
       "A generation alpha technology project that focuses on digital documents minting, authentication, authentication analysis software, social networking.",
     language: "React + Tailwind + vite",
@@ -60,9 +59,21 @@ export const data = [
     img: "https://res.cloudinary.com/dpokiomqq/image/upload/v1679850486/preshdev_mvgxyf.png",
     title: "preshDev",
     code: "Code",
+    codeLink: "https://github.com/preshpi/portfolio_",
     subtitle: "My Portfolio website",
     language: "React + Tailwind + vite",
     viewLink: "https://preciousegwuenu.dev/",
+    view: "View Site",
+  },
+  {
+    id: 7,
+    img: "https://res.cloudinary.com/dpokiomqq/image/upload/v1681463578/FlairStyle___Home_1_wotksb.png",
+    title: "FlairStyle",
+    code: "Code",
+    codeLink: "https://github.com/preshpi/commerce",
+    subtitle: "Fashion E-commerce website",
+    language: "Next.js + Tailwind + Commerce.js(cms)",
+    viewLink: "https://flairstyle.vercel.app/",
     view: "View Site",
   },
 ];

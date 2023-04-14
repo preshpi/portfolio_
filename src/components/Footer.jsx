@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       <Socials />
-      <div className="mt-5 flex flex-col justify-center items-center border-t dark:border-resume border-darkgrey">
+      <div className="sticky top-[100%] flex flex-col justify-center items-center border-t dark:border-resume border-darkgrey">
         <p className="text-darkgrey dark:text-resume py-2 px-2">
           © 2023 PreshDev.
         </p>

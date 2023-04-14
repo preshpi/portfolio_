@@ -23,3 +23,19 @@ span{
     display: inline-block
 }
 
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-track{
+    background:#5D5A5A;
+    border-radius:6px;
+    margin-block: .2rem;
+
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(rgb(97, 90, 90), rgb(213, 211, 211));
+    border-radius:6px;
+}
+
