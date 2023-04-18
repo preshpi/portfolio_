@@ -7,7 +7,7 @@ export const data = [
     language: "Next.js + Tailwind + pexels API",
     code: "Code",
     codeLink: "https://github.com/preshpi/pinterest-clon",
-    viewLink: "https://mediasurf.vercel.app/",
+    viewLink: "https://mediasurff.netlify.app/",
     view: "View Site",
 
   },
