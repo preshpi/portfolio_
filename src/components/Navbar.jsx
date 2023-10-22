@@ -5,7 +5,7 @@ const Navbar = () => {
     <div>
       <ul className="grid w-[200px] items-center space-y-4">
         <li>
-          <NavLink to="/about" className="flex items-center space-x-8">
+          <NavLink to="/" className="flex items-center space-x-8">
           <div className="h-[2px] w-16 bg-primary dark:bg-gray navline"></div>
 
             <p className="lg:text-[16px] lg:leading-[20.42px] mx-3 font-[700] uppercase navtext">

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import resume from "../../data/resume.pdf";
+import resume from "../../data/PreshDevResume.pdf";
 import { IoLogoHtml5 } from "react-icons/io";
 import { ImGit } from "react-icons/im"
 import { TbBrandNextjs } from "react-icons/tb";

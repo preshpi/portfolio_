@@ -57,7 +57,7 @@ export const data = [
   },
   {
     id: 6,
-    img: "https://res.cloudinary.com/dgtc1iood/image/upload/v1673940945/Frame_48_wlu0wt.png",
+    img: "https://res.cloudinary.com/dgtc1iood/image/upload/v1697973810/noteey_hb6czf.png",
     title: "Noteey",
     subtitle: "Note Taking Tool",
     language: "NextJs + Tailwind + TypeScript",

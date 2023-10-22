@@ -1,5 +1,5 @@
 import React from "react";
-import resume from "../../data/resume.pdf";
+import resume from "../../data/PreshDevResume.pdf";
 import { motion } from "framer-motion"
 
 function MobileAbout() {

@@ -23,6 +23,7 @@ import MobileSkills from "./pages/Skills/MobileSkills";
 
 import UseDarkmode from "./components/useDarkmode";
 import { AnimatePresence } from "framer-motion";
+import Error404 from "./pages/Error404";
 
 function App() {
   const location = useLocation();
@@ -42,11 +43,10 @@ function App() {
               <>
                 <Routes location={location} key={location.key}>
                   <Route path="/" element={<Heroabout />} />
-                  <Route path="about" element={<Heroabout />} />
                   <Route path="skills" element={<Heroskills />} />
                   <Route path="projects" element={<Heroproject />} />
                   <Route path="contact" element={<Herocontact />} />
-                </Routes>
+÷                </Routes>
                 <div className="mt-[70px]">
                   <Navbar />
                 </div>
@@ -56,10 +56,10 @@ function App() {
               <>
                 <Routes location={location} key={location.key}>
                   <Route path="/" element={<About />} />
-                  <Route path="about" element={<About />} />
                   <Route path="skills" element={<Skills />} />
                   <Route path="projects" element={<Projects />} />
                   <Route path="contact" element={<Contact />} />
+                  <Route path="*" element={<Error404 />} />
                 </Routes>
               </>
             </div>
@@ -72,10 +72,10 @@ function App() {
         <MobileNav />
         <Routes>
           <Route path="/" element={<MobileAbout />} />
-          <Route path="about" element={<MobileAbout />} />
           <Route path="projects" element={<MobileProject />} />
           <Route path="skills" element={<MobileSkills />} />
           <Route path="contact" element={<MobileContact />} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />
       </div>
