@@ -96,9 +96,9 @@ const Contact = () => {
             type="submit"
           >
             <span className="relative w-[500px] h-[60px] group  px-6 py-3 font-bold">
-              <span className="absolute inset-0 w-[500px] h-[60px] border-2 border-darkgrey dark:border-white translate-y-2 translate-x-2 transition duration-300 ease-out transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
-              <span className="absolute inset-0 w-[500px] h-[60px] bg-darkgrey dark:bg-white"></span>
-              <span className="text-resume dark:text-darkgrey text-[16px] text-center font-[700] leading-[24px] relative group-hover:opacity-85">
+              <span className="absolute inset-0 w-[490px] h-[60px] border-2 border-darkgrey dark:border-white translate-y-2 translate-x-2 transition duration-300 ease-out transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
+              <span className="absolute inset-0 w-[490px] h-[60px] bg-darkgrey dark:bg-white"></span>
+              <span className="text-resume dark:text-darkgrey text-[18px] text-center font-[700] leading-[24px] relative group-hover:opacity-85">
                 CONNECT
               </span>
             </span>

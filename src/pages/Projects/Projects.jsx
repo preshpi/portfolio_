@@ -7,21 +7,19 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import { motion } from "framer-motion";
 
 const Projects = () => {
-  
-    const container = {
-      hidden: {
-        opacity: 0,
-      },
-      visible: {
-        opacity: 1,
-        transistion: { delay: 1.5, duration: 1.5 },
-      },
-      exit: {
-        opacity: 0,
-        transistion: { ease: "easeInOut" },
-      },
-    };
-
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transistion: { delay: 1.5, duration: 1.5 },
+    },
+    exit: {
+      opacity: 0,
+      transistion: { ease: "easeInOut" },
+    },
+  };
 
   return (
     <motion.div
@@ -43,7 +41,7 @@ const Projects = () => {
           view,
           viewLink,
         }) => (
-          <div className="mb-[24px]">
+          <div className="mb-[24px]" key={id}>
             <motion.div
               className="rounded lg:overflow-hidden shadow-lg w-80 h-full mx-auto bg-white dark:bg-secondary"
               key={id}
@@ -65,12 +63,17 @@ const Projects = () => {
                   {language}
                 </p>
                 <div className="mt-[12px] flex gap-[30px]">
-                  <span className="flex justify-center items-center cursor-pointer gap-[8px] text-black2 text-[14px] hover:opacity-75  hover:scale-110 transistion-all duration-500">
-                    <TbBrandGithub className="dark:fill-white fill-black2" />
-                    <a href={codeLink} className="dark:text-gray">
-                      {code}
-                    </a>
-                  </span>
+                  {code && (
+                    <span className="flex justify-center items-center cursor-pointer gap-[8px] text-black2 text-[14px] hover:opacity-75  hover:scale-110 transistion-all duration-500">
+                      <>
+                        <TbBrandGithub className="dark:fill-white fill-black2" />
+                        <a href={codeLink} className="dark:text-gray">
+                          {code}
+                        </a>
+                      </>
+                    </span>
+                  )}
+
                   <span className="flex justify-center items-center cursor-pointer gap-[8px] text-black2 text-[14px] hover:opacity-75 hover:scale-110 transistion-all duration-500">
                     <AiFillEye className="dark:text-white" />
                     <a href={viewLink} className="dark:text-gray">

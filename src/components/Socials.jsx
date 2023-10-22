@@ -52,7 +52,7 @@ const Socials = () => {
               className="dark:bg-white hover:opacity-75"
             />
           </a>
-          <a href="https://twitter.com/preshypie" target="_blank">
+          <a href="https://twitter.com/presh__dev" target="_blank">
             <FloatButton
               icon={<FaTwitter />}
               className="dark:bg-white hover:opacity-75"

@@ -31,13 +31,13 @@ function App() {
     <>
       {/* Large screen */}
 
-      <div className="h-screen bg-resume dark:bg-bgblack transition-colors duration-300 lg:block hidden">
-        <div className="w-[97%] mx-auto h-14 flex items-end justify-end pt-4">
+      <div className="h-screen bg-resume overflow-y-scroll dark:bg-bgblack transition-colors duration-300 lg:block hidden">
+        <div className="w-full h-14 flex items-end justify-end pt-4 px-2">
           <UseDarkmode />
           <Socials />
         </div>
         <div className="flex items-center justify-center">
-          <div className="flex w-[80%] h-[90vh] items-center justify-center">
+          <div className="flex w-[80%] h-[100%] items-center justify-center">
             <div className="w-1/2 overflow-auto">
               <>
                 <Routes location={location} key={location.key}>

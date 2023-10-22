@@ -4,8 +4,8 @@ import TextSpan from "../../components/TextSpan";
 
 
 const Heroproject = () => {
-    const header = "I love working on fun".split("");
-    const sentence = "Projects".split("");
+    const header = "I love working on".split("");
+    const sentence = "fun projects".split("");
 
    const container = {
      hidden: {

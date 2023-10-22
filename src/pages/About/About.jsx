@@ -117,7 +117,7 @@ const About = () => {
                   </h1>
                 </div>
               </div>
-              <div className="gap-x-[44px] gap-y-[5px] flex flex-wrap justify-center">
+              <div className="gap-x-[44px] gap-y-[5px] py-4 flex flex-wrap justify-center">
                 {data.map(({ txt, id }) => {
                   return (
                     <div

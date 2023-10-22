@@ -38,6 +38,10 @@ function MobileNav() {
     },
     {
       id: 6,
+      video: "VIDEOS",
+    },
+    {
+      id: 7,
       icon: <UseDarkmode />,
     },
   ];
@@ -100,7 +104,7 @@ function MobileNav() {
 
         
         {
-          list.map(({id, text, path, icon, blog}) => {
+          list.map(({id, text, path, icon, blog, video}) => {
             return (
               <motion.li
                 key={id}
@@ -111,6 +115,9 @@ function MobileNav() {
                 </NavLink>
                 <a href="https://preshblog.vercel.app/" target="_blank">
                   {blog}
+                </a>
+                <a href="https://preshpie.notion.site/Video-Editing-Portfolio-ea5a25af009a4423a444f0793132f244?pvs=4" target="_blank">
+                  {video}
                 </a>
                 {icon}
               </motion.li>

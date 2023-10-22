@@ -13,17 +13,6 @@ export const data = [
   },
   {
     id: 2,
-    img: "https://res.cloudinary.com/dgtc1iood/image/upload/v1673941436/Speak-Better_dlvelq.png",
-    title: "Speak Better",
-    subtitle: "Corrects all grammar errors.",
-    language: "React + Tailwind + NodeJs",
-    code: "Code",
-    codeLink: "https://github.com/workshopapps/grammarcheckerai.web",
-    viewLink: "https://speakbetter.fun/",
-    view: "View Site",
-  },
-  {
-    id: 3,
     img: "https://res.cloudinary.com/dpokiomqq/image/upload/v1675030839/MicroURL_vldrk4.png",
     title: "MicroURL",
     subtitle: "Tools for shorten Url",
@@ -34,9 +23,9 @@ export const data = [
     view: "View Site",
   },
   {
-    id: 4,
+    id: 3,
     img: "https://res.cloudinary.com/dpokiomqq/image/upload/v1679850196/Regiz_-_Alpha_Digital_Technology_1_kwkghz.png",
-    title: "Regiz",
+    title: "Regiz website",
     code: "Code",
     subtitle:
       "A generation alpha technology project that focuses on digital documents minting, authentication, authentication analysis software, social networking.",
@@ -45,7 +34,7 @@ export const data = [
     view: "View Site",
   },
   {
-    id: 5,
+    id: 4,
     img: "https://res.cloudinary.com/dpokiomqq/image/upload/v1681463578/FlairStyle___Home_1_wotksb.png",
     title: "FlairStyle",
     code: "Code",
@@ -56,7 +45,7 @@ export const data = [
     view: "View Site",
   },
   {
-    id: 6,
+    id: 5,
     img: "https://res.cloudinary.com/dgtc1iood/image/upload/v1673940945/Frame_48_wlu0wt.png",
     title: "Password Generator",
     subtitle: "Creates unique, secure passwords for online accounts.",
@@ -65,5 +54,13 @@ export const data = [
     codeLink: "https://github.com/preshpi/password",
     viewLink: "https://password-preshpi.vercel.app/",
     view: "View Site",
+  },
+  {
+    id: 6,
+    img: "https://res.cloudinary.com/dgtc1iood/image/upload/v1673940945/Frame_48_wlu0wt.png",
+    title: "Noteey",
+    subtitle: "Note Taking Tool",
+    language: "NextJs + Tailwind + TypeScript",
+    view: "Coming soon",
   },
 ];
