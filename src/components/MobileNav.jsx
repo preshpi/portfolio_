@@ -6,7 +6,6 @@ import UseDarkmode from "./useDarkmode";
 import { motion } from "framer-motion";
 
 function MobileNav() {
-
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
   const handleClose = () => setNav(!nav);
@@ -47,20 +46,18 @@ function MobileNav() {
   ];
 
   const sidebar = {
-       open: {
-        opacity: 3,
-      },
-      closed: {
-        opacity: 0.2,
-        transistion: { delay: 1.5, duration: 1.5 },
-      },
-      exit: {
-        opacity: 1,
-        transistion: { ease: "easeInOut" },
-      },
-  }
-
-
+    open: {
+      opacity: 3,
+    },
+    closed: {
+      opacity: 0.2,
+      transistion: { delay: 1.5, duration: 1.5 },
+    },
+    exit: {
+      opacity: 1,
+      transistion: { ease: "easeInOut" },
+    },
+  };
 
   return (
     <div className="w-[95%] mx-auto h-[80px] z-10 relative top-0">
@@ -87,14 +84,13 @@ function MobileNav() {
         variants={sidebar}
         initial="open"
         exit="exit"
-        animate={ nav ? "open" : "closed"}
+        animate={nav ? "open" : "closed"}
         className={
           !nav
             ? "hidden"
             : "right-[0px] w-[50%] p-2 h-full fixed bg-grey2 dark:bg-secondary top-0 z-10 transition-all duration-300 drop-shadow-lg"
         }
       >
-
         <div className="ml-auto pt-2 w-[40px]">
           <CgClose
             onClick={handleClose}
@@ -102,28 +98,28 @@ function MobileNav() {
           />
         </div>
 
-        
-        {
-          list.map(({id, text, path, icon, blog, video}) => {
-            return (
-              <motion.li
-                key={id}
-                className="cursor-pointer font-[500] text-[#292929] dark:text-white mt-16 text-center "
+        {list.map(({ id, text, path, icon, blog, video }) => {
+          return (
+            <motion.li
+              key={id}
+              className="cursor-pointer font-[500] text-[#292929] dark:text-white mt-16 text-center "
+            >
+              <NavLink onClick={handleClose} to={path}>
+                {text}
+              </NavLink>
+              <a href="https://preshblog.vercel.app/" target="_blank">
+                {blog}
+              </a>
+              <a
+                href="https://preshpie.notion.site/Video-Editing-Portfolio-ea5a25af009a4423a444f0793132f244?pvs=4"
+                target="_blank"
               >
-                <NavLink onClick={handleClose} to={path}>
-                  {text}
-                </NavLink>
-                <a href="https://preshblog.vercel.app/" target="_blank">
-                  {blog}
-                </a>
-                <a href="https://preshpie.notion.site/Video-Editing-Portfolio-ea5a25af009a4423a444f0793132f244?pvs=4" target="_blank">
-                  {video}
-                </a>
-                {icon}
-              </motion.li>
-            );
-          })
-        }
+                {video}
+              </a>
+              {icon}
+            </motion.li>
+          );
+        })}
       </motion.ul>
     </div>
   );
