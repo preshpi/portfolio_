@@ -25,22 +25,19 @@ const Socials = () => {
     },
   };
 
-
-
   return (
     <div className="mt-[35px] grid lg:justify-start justify-center  lg:items-start items-center">
-      <FloatButton.Group
-        trigger="click"
-        type="default"
-        icon={<FaShareAlt />}
-      >
+      <FloatButton.Group trigger="click" type="default" icon={<FaShareAlt />}>
         <motion.div
           variants={socialcontainer}
           initial="hidden"
           animate="animate"
           className="gap-5 grid"
         >
-          <a href="https://www.linkedin.com/in/preshpi-22/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/preciousegwuenu/"
+            target="_blank"
+          >
             <FloatButton
               icon={<FaLinkedinIn />}
               className="dark:bg-white hover:opacity-75"
@@ -52,13 +49,16 @@ const Socials = () => {
               className="dark:bg-white hover:opacity-75"
             />
           </a>
-          <a href="https://twitter.com/presh__dev" target="_blank">
+          <a href="https://twitter.com/preshdevvvv" target="_blank">
             <FloatButton
               icon={<FaTwitter />}
               className="dark:bg-white hover:opacity-75"
             />
           </a>
-          <a href="https://www.tiktok.com/@tech.girl4?lang=en" target="_blank">
+          <a
+            href="https://www.tiktok.com/@preshdevvv?_t=8j4w9YmFWre&_r=1"
+            target="_blank"
+          >
             <FloatButton
               icon={<FaTiktok />}
               className="dark:bg-white hover:opacity-75"
