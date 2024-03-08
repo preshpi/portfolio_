@@ -2,40 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    font-family: 'Space Grotesk', sans-serif;
+body {
+  font-family: "Space Grotesk", sans-serif;
 }
 
-.active .navline{
-    width: 7rem;
+.active .navline {
+  width: 7rem;
 }
 
-.active .navtext{
-    font-weight: 800;
-    color:rgb(67, 64, 64);
+.active .navtext {
+  font-weight: 800;
+  color: rgb(67, 64, 64);
 }
 
-.navtext{
-    color:#5D5A5A;
+.navtext {
+  color: #5d5a5a;
 }
 
-span{ 
-    display: inline-block
+span {
+  display: inline-block;
 }
 
-::-webkit-scrollbar{
-    width: 12px;
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-::-webkit-scrollbar-track{
-    background:#5D5A5A;
-    border-radius:6px;
-    margin-block: .2rem;
-
+::-webkit-scrollbar-track {
+  background: #5d5a5a;
+  border-radius: 6px;
+  margin-block: 0.2rem;
 }
 
-::-webkit-scrollbar-thumb{
-    background:linear-gradient(rgb(97, 90, 90), rgb(213, 211, 211));
-    border-radius:6px;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgb(97, 90, 90), rgb(213, 211, 211));
+  border-radius: 6px;
 }
 
+.progress {
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(
+        var(--r1) var(--r2) at top,
+        #0000 79.5%,
+        #03030d 80%
+      )
+      center left,
+    radial-gradient(var(--r1) var(--r2) at bottom, #03030d 79.5%, #0000 80%)
+      center center,
+    radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #03030d 80%) center
+      right,
+    #dfdfe6;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%, 0% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  animation: progress-mbj53w 2.4s infinite linear;
+}
+
+.loading {
+  height: calc(100vh - 14rem);
+}
+@keyframes progress-mbj53w {
+  33% {
+    background-position: 0% 33%, 100% 33%, 200% 33%;
+  }
+
+  66% {
+    background-position: -100% 66%, 0% 66%, 100% 66%;
+  }
+
+  100% {
+    background-position: 0% 100%, 100% 100%, 200% 100%;
+  }
+}

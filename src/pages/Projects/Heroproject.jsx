@@ -1,34 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import TextSpan from "../../components/TextSpan";
-
+import useAnimationHook from "../../components/useAnimationHook";
 
 const Heroproject = () => {
-    const header = "I love working on".split("");
-    const sentence = "fun projects".split("");
-
-   const container = {
-     hidden: {
-       opacity: 0,
-     },
-     visible: {
-       opacity: 1,
-       transistion: { delay: 1.5, duration: 1.5 },
-     },
-     exit: {
-       opacity: 0,
-       transistion: { ease: "easeInOut" },
-     },
-   };
+  const header = "I love working on".split("");
+  const sentence = "fun projects".split("");
+  const controls = useAnimationHook();
 
   return (
     <motion.div
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
     >
-
       <span className="text-primary dark:text-gray  lg:text-[48px] lg:leading-[64px] font-[700] w-[409px]">
         {header.map((letter, index) => {
           return (

@@ -2,32 +2,19 @@ import React from "react";
 import resume from "../../data/PreshDevResume.pdf";
 import { motion } from "framer-motion";
 import TextSpan from "../../components/TextSpan";
+import useAnimationHook from "../../components/useAnimationHook";
 
 const Heroskills = () => {
   const header = "I work mostly with".split("");
   const sentence = "Frontend".split("");
   const word = "Technologies".split("");
-
-  const container = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transistion: { delay: 1.5, duration: 1.5 },
-    },
-    exit: {
-      opacity: 0,
-      transistion: { ease: "easeInOut" },
-    },
-  };
+  const controls = useAnimationHook();
 
   return (
     <motion.div
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
     >
       <p className="text-primary dark:text-gray text-[48px] leading-[64px] font-[700]">
         {header.map((letter, index) => {

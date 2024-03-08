@@ -5,29 +5,17 @@ import { AiFillEye } from "react-icons/ai";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { motion } from "framer-motion";
+import useAnimationHook from "../../components/useAnimationHook";
 
 const Projects = () => {
-  const container = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transistion: { delay: 1.5, duration: 1.5 },
-    },
-    exit: {
-      opacity: 0,
-      transistion: { ease: "easeInOut" },
-    },
-  };
+  const controls = useAnimationHook();
 
   return (
     <motion.div
       className="w-[80%] mx-auto lg:overflow-auto lg:h-[600px]"
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
     >
       {data.map(
         ({

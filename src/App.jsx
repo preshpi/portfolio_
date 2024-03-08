@@ -1,29 +1,33 @@
-import { React } from "react";
+import { React, Suspense, lazy } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-
-import About from "./pages/About/About";
-import Skills from "./pages/Skills/Skills";
-import Projects from "./pages/Projects/Projects";
-import Contact from "./pages/Contact/Contact";
 import Navbar from "./components/Navbar";
-
-import Heroabout from "./pages/About/Heroabout";
-import Heroskills from "./pages/Skills/Heroskills";
-import Heroproject from "./pages/Projects/Heroproject";
-import Herocontact from "./pages/Contact/Herocontact";
-
 import Socials from "./components/Socials";
 import Footer from "./components/Footer";
 
 import MobileNav from "./components/MobileNav";
-import MobileAbout from "./pages/About/MobileAbout";
-import MobileContact from "./pages/Contact/MobileContact";
-import MobileProject from "./pages/Projects/MobileProject";
-import MobileSkills from "./pages/Skills/MobileSkills";
+const Heroabout = lazy(() => import("./pages/About/Heroabout"));
+const Heroskills = lazy(() => import("./pages/Skills/Heroskills"));
+const Heroproject = lazy(() => import("./pages/Projects/Heroproject"));
+const Herocontact = lazy(() => import("./pages/Contact/Herocontact"));
+const About = lazy(() => import("./pages/About/About"));
+const Skills = lazy(() => import("./pages/Skills/Skills"));
+const Projects = lazy(() => import("./pages/Projects/Projects"));
+const Contact = lazy(() => import("./pages/Contact/Contact"));
+const MobileAbout = lazy(() => import("./pages/About/MobileAbout"));
+const MobileProject = lazy(() => import("./pages/Projects/MobileProject"));
+const MobileSkills = lazy(() => import("./pages/Skills/MobileSkills"));
+const MobileContact = lazy(() => import("./pages/Contact/MobileContact"));
 
 import UseDarkmode from "./components/useDarkmode";
-import { AnimatePresence } from "framer-motion";
 import Error404 from "./pages/Error404";
+
+function Loading() {
+  return (
+    <div className="loading items-center justify-center flex">
+      <div className="progress"></div>
+    </div>
+  );
+}
 
 function App() {
   const location = useLocation();
@@ -42,11 +46,39 @@ function App() {
             <div className="w-1/2 overflow-auto">
               <>
                 <Routes location={location} key={location.key}>
-                  <Route path="/" element={<Heroabout />} />
-                  <Route path="skills" element={<Heroskills />} />
-                  <Route path="projects" element={<Heroproject />} />
-                  <Route path="contact" element={<Herocontact />} />
-÷                </Routes>
+                  <Route
+                    path="/"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <Heroabout />
+                      </Suspense>
+                    }
+                  />
+                  <Route
+                    path="skills"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <Heroskills />
+                      </Suspense>
+                    }
+                  />
+                  <Route
+                    path="projects"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <Heroproject />
+                      </Suspense>
+                    }
+                  />
+                  <Route
+                    path="contact"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <Herocontact />
+                      </Suspense>
+                    }
+                  />
+                </Routes>
                 <div className="mt-[70px]">
                   <Navbar />
                 </div>
@@ -55,11 +87,46 @@ function App() {
             <div className="w-1/2 overflow-auto">
               <>
                 <Routes location={location} key={location.key}>
-                  <Route path="/" element={<About />} />
-                  <Route path="skills" element={<Skills />} />
-                  <Route path="projects" element={<Projects />} />
-                  <Route path="contact" element={<Contact />} />
-                  <Route path="*" element={<Error404 />} />
+                  <Route
+                    path="/"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <About />
+                      </Suspense>
+                    }
+                  />
+                  <Route
+                    path="skills"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <Skills />
+                      </Suspense>
+                    }
+                  />
+                  <Route
+                    path="projects"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <Projects />
+                      </Suspense>
+                    }
+                  />
+                  <Route
+                    path="contact"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <Contact />
+                      </Suspense>
+                    }
+                  />
+                  <Route
+                    path="*"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <Error404 />
+                      </Suspense>
+                    }
+                  />
                 </Routes>
               </>
             </div>
@@ -71,11 +138,46 @@ function App() {
       <div className="lg:hidden block min-h-screen bg-resume dark:bg-bgblack transition-colors duration-300">
         <MobileNav />
         <Routes>
-          <Route path="/" element={<MobileAbout />} />
-          <Route path="projects" element={<MobileProject />} />
-          <Route path="skills" element={<MobileSkills />} />
-          <Route path="contact" element={<MobileContact />} />
-          <Route path="*" element={<Error404 />} />
+          <Route
+            path="/"
+            element={
+              <Suspense fallback={<Loading />}>
+                <MobileAbout />
+              </Suspense>
+            }
+          />
+          <Route
+            path="projects"
+            element={
+              <Suspense fallback={<Loading />}>
+                <MobileProject />
+              </Suspense>
+            }
+          />
+          <Route
+            path="skills"
+            element={
+              <Suspense fallback={<Loading />}>
+                <MobileSkills />
+              </Suspense>
+            }
+          />
+          <Route
+            path="contact"
+            element={
+              <Suspense fallback={<Loading />}>
+                <MobileContact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<Loading />}>
+                <Error404 />
+              </Suspense>
+            }
+          />
         </Routes>
         <Footer />
       </div>

@@ -1,32 +1,19 @@
 import React from "react";
-import resume from '../../data/PreshDevResume.pdf';
+import resume from "../../data/PreshDevResume.pdf";
 import { motion } from "framer-motion";
 import TextSpan from "../../components/TextSpan";
+import useAnimationHook from "../../components/useAnimationHook";
 function Heroabout() {
+  const controls = useAnimationHook();
 
-  const container = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transistion: { delay: 1.5, duration: 1.5 }
-    },
-    exit: {
-      opacity: 0,
-       transistion: { ease: 'easeInOut' }
-    }
-  }
-
-  const header = "Hello, I'm" .split("");
-  const sentence = "Precious Egwuenu" .split("");
+  const header = "Hello, I'm".split("");
+  const sentence = "Precious Egwuenu".split("");
 
   return (
     <motion.div
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
     >
       <span className="text-primary dark:text-gray font-[700] leading-[64px] text-[48px]">
         {header.map((letter, index) => {
@@ -54,13 +41,15 @@ function Heroabout() {
           {" "}
           frontend developer{" "}
         </span>{" "}
-        I have a strong background in creating visually appealing and <span className="text-secondary font-bold dark:text-white">{" "}
-        user-friendly web experiences.
+        I have a strong background in creating visually appealing and{" "}
+        <span className="text-secondary font-bold dark:text-white">
+          {" "}
+          user-friendly web experiences.
         </span>{" "}
         I am motivated to find a role where I can challenge myself{" "}
         <span className="text-secondary font-bold dark:text-white">
           and provide value to website users.
-        </span>{" "}       
+        </span>{" "}
         I am excited to bring my knowledge and experience to a team and
         contribute to a company's success.
       </p>

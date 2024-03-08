@@ -1,28 +1,16 @@
 import React from "react";
 import resume from "../../data/PreshDevResume.pdf";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import useAnimationHook from "../../components/useAnimationHook";
 
 function MobileAbout() {
-   const container = {
-     hidden: {
-       opacity: 0,
-     },
-     visible: {
-       opacity: 1,
-       transistion: { delay: 1.5, duration: 1.5 },
-     },
-     exit: {
-       opacity: 0,
-       transistion: { ease: "easeInOut" },
-     },
-   };
+  const controls = useAnimationHook();
 
   return (
     <motion.div
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
       className="mt-[32px] h-[65vh] md:h-[72vh] flex flex-col items-center justify-center"
     >
       <div className="text-center grid items-center justify-center place-items-center">

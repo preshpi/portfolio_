@@ -2,6 +2,7 @@ import { React, useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import useAnimationHook from "../../components/useAnimationHook";
 
 function MobileContact() {
   const [name, setName] = useState("");
@@ -10,6 +11,7 @@ function MobileContact() {
   const error = () => toast.error("Error occured!");
   const success = () => toast.success("Successfully sent!");
   const form = useRef();
+  const controls = useAnimationHook();
 
   const changeSubmit = (e) => {
     e.preventDefault();
@@ -17,50 +19,34 @@ function MobileContact() {
       error();
     } else {
       success();
-       
+
       emailjs
-           .sendForm(
-             "service_aakyhrk",
-             "template_scsfe35",
-             form.current,
-             "rBHPqsGP1vYUCEoP9"
-           )
-           .then(
-             (result) => {
-               console.log(result.text);
-               console.log("sent");
-             },
-             (error) => {
-               console.log(error.text);
-             }
-           );
+        .sendForm(
+          "service_aakyhrk",
+          "template_scsfe35",
+          form.current,
+          "rBHPqsGP1vYUCEoP9"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            console.log("sent");
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
     }
     setName("");
     setEmail("");
     setMessage("");
-
   };
-
-   const container = {
-     hidden: {
-       opacity: 0,
-     },
-     visible: {
-       opacity: 1,
-       transistion: { delay: 1.5, duration: 1.5 },
-     },
-     exit: {
-       opacity: 0,
-       transistion: { ease: "easeInOut" },
-     },
-   };
 
   return (
     <motion.div
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
       className="mt-[32px] mx-auto w-[80%]"
     >
       <div className="text-center grid items-center justify-center place-items-center">

@@ -1,7 +1,9 @@
 import React from "react";
 import { Carousel } from "antd";
 import { motion } from "framer-motion";
+import useAnimationHook from "../../components/useAnimationHook";
 const About = () => {
+  const controls = useAnimationHook();
 
   const initals = [
     {
@@ -83,27 +85,11 @@ const About = () => {
     },
   ];
 
-  const container = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transistion: { delay: 1.5, duration: 1.5 },
-    },
-    exit: {
-      opacity: 0,
-      transistion: { ease: "easeInOut" },
-    },
-  };
-
   return (
     <motion.div
-      className="w-full"
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
     >
       <Carousel autoplay effect="fade" dots={false}>
         {initals.map(({ id, text, data }) => {

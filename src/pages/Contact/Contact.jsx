@@ -2,65 +2,54 @@ import { React, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import swal from "sweetalert";
+import useAnimationHook from "../../components/useAnimationHook";
 
 const Contact = () => {
-   const [name, setName] = useState("");
-   const [email, setEmail] = useState("");
-   const [message, setMessage] = useState("");
-   const form = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const form = useRef();
+  const controls = useAnimationHook();
 
-   const handleSubmit = (e) => {
-     e.preventDefault();
-     if (name.length === 0 || email.length === 0 || message.length === 0) {
-     swal("Please complete filling the form", "error");
-
-     } else {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (name.length === 0 || email.length === 0 || message.length === 0) {
+      swal("Please complete filling the form", "error");
+    } else {
       swal("Successful!", "I'll get back to you!", "success");
-       emailjs
-         .sendForm(
-           "service_aakyhrk",
-           "template_scsfe35",
-           form.current,
-           "rBHPqsGP1vYUCEoP9"
-         )
-         .then(
-           (result) => {
-             console.log(result.text);
-             console.log("sent");
-           },
-           (error) => {
-             console.log(error.text);
-           }
-         );
-     }
-     setName("");
-     setEmail("");
-     setMessage("");
-   };
-
-    const container = {
-      hidden: {
-        opacity: 0,
-      },
-      visible: {
-        opacity: 1,
-        transistion: { delay: 1.5, duration: 1.5 },
-      },
-      exit: {
-        opacity: 0,
-        transistion: { ease: "easeInOut" },
-      },
-    };
-
+      emailjs
+        .sendForm(
+          "service_aakyhrk",
+          "template_scsfe35",
+          form.current,
+          "rBHPqsGP1vYUCEoP9"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            console.log("sent");
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
   return (
     <motion.div
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
     >
-      <form ref={form} className="space-y-6 h-[500px] flex items-center justify-center" onSubmit={handleSubmit}>
+      <form
+        ref={form}
+        className="space-y-6 h-[500px] flex items-center justify-center"
+        onSubmit={handleSubmit}
+      >
         <div className="items-center justify-center place-items-center grid gap-8">
           <input
             type="text"

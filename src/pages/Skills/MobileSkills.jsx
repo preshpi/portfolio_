@@ -1,95 +1,80 @@
 import React, { useEffect } from "react";
 import resume from "../../data/PreshDevResume.pdf";
 import { IoLogoHtml5 } from "react-icons/io";
-import { ImGit } from "react-icons/im"
+import { ImGit } from "react-icons/im";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
 import { IoLogoSass } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { DiCss3Full, DiJavascript1 } from "react-icons/di";
 import { motion } from "framer-motion";
+import useAnimationHook from "../../components/useAnimationHook";
 
 function MobileSkills() {
+  const controls = useAnimationHook();
 
-    const container = {
-      hidden: {
-        opacity: 0,
-      },
-      visible: {
-        opacity: 1,
-        transistion: { delay: 1.5, duration: 1.5 },
-      },
-      exit: {
-        opacity: 0,
-        transistion: { ease: "easeInOut" },
-      },
-    };
+  const data = [
+    {
+      id: 1,
+      icons: <ImGit />,
+      text: "Git",
+      color: "#F05032",
+    },
+    {
+      id: 2,
+      icons: <FaReact />,
+      text: "React",
+      color: "#60DAFB",
+    },
+    {
+      id: 3,
+      icons: <SiTailwindcss />,
+      text: "Tailwind",
+      color: "#07B7D4",
+    },
+    {
+      id: 4,
+      icons: <IoLogoHtml5 />,
+      text: "HTML",
+      color: "#F16529",
+    },
+    {
+      id: 5,
+      icons: <DiCss3Full />,
+      text: "CSS",
+      color: "#2965F1",
+    },
+    {
+      id: 6,
+      icons: <DiJavascript1 />,
+      text: "JavaScript",
+      color: "#F7DF1E",
+    },
+    {
+      id: 7,
+      icons: <SiTypescript />,
+      text: "TypeScript",
+      color: "#3074C0",
+    },
+    {
+      id: 8,
+      icons: <IoLogoSass />,
+      text: "Sass",
+      color: "#C76494",
+    },
+    {
+      id: 9,
+      icons: <TbBrandNextjs />,
+      text: "NextJS",
+      color: "#111",
+    },
+  ];
 
-    const data = [
-      {
-        id: 1,
-        icons: <ImGit />,
-        text: "Git",
-        color: "#F05032",
-      },
-      {
-        id: 2,
-        icons: <FaReact />,
-        text: "React",
-        color: "#60DAFB",
-      },
-      {
-        id: 3,
-        icons: <SiTailwindcss />,
-        text: "Tailwind",
-        color: "#07B7D4",
-      },
-      {
-        id: 4,
-        icons: <IoLogoHtml5 />,
-        text: "HTML",
-        color: "#F16529",
-      },
-      {
-        id: 5,
-        icons: <DiCss3Full />,
-        text: "CSS",
-        color: "#2965F1",
-      },
-      {
-        id: 6,
-        icons: <DiJavascript1 />,
-        text: "JavaScript",
-        color: "#F7DF1E",
-      },
-      {
-        id: 7,
-        icons: <SiTypescript />,
-        text: "TypeScript",
-        color: "#3074C0",
-      },
-      {
-        id: 8,
-        icons: <IoLogoSass />,
-        text: "Sass",
-        color: "#C76494",
-      },
-      {
-        id: 9,
-        icons: <TbBrandNextjs />,
-        text: "NextJS",
-        color: "#111",
-      },
-    ];
-
-
-    
   return (
     <motion.div
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
       className="mt-[32px] overflow-auto"
     >
       <div className="grid justify-center items-center place-items-center text-center">
@@ -105,7 +90,7 @@ function MobileSkills() {
           <span className="text-secondary font-bold dark:text-white">
             tools
           </span>{" "}
-          i’ve worked with over the years, for my{" "}
+          i`ve worked with over the years, for my{" "}
           <span className="text-secondary font-bold dark:text-white">
             personal, professional
           </span>{" "}
@@ -145,11 +130,15 @@ function MobileSkills() {
 
       <div className="flex justify-center items-center mt-[40px]">
         <ul className="grid grid-cols-2 md:grid-cols-3 gap-x-[24px] space-y-3">
-          {data.map(({ id, icons, text, color }) => (         
-            <li id={id} className="w-[163px] h-[77px] mt-3 bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300">
+          {data.map(({ id, icons, text, color }) => (
+            <li
+              id={id}
+              key={id}
+              className="w-[163px] h-[77px] mt-3 bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300"
+            >
               <span className="flex gap-[16px] w-[101px] justify-evenly">
                 <span className="w-[35px] h-[35px]">
-                {React.cloneElement(icons, { color: color, size: 24 })}
+                  {React.cloneElement(icons, { color: color, size: 24 })}
                 </span>
                 <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px]">
                   {text}
