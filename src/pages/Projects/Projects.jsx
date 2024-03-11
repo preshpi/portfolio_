@@ -12,7 +12,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="py-12 px-5 overflow-y-scroll lg:h-[450px]"
+      className="py-12 px-5 overflow-y-scroll lg:h-[450px] md:grid-cols-2 lg:grid-cols-1 grid"
       initial={{ opacity: 0 }}
       animate={controls}
       exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
@@ -34,17 +34,12 @@ const Projects = () => {
               className="rounded lg:overflow-hidden shadow-lg w-80 h-full mx-auto bg-white dark:bg-secondary"
               key={id}
             >
-              <LazyLoadImage
-                src={img}
-                alt={title}
-                effect="blur"
-                placeholderSrc={img}
-              />
+              <LazyLoadImage src={img} alt={title} placeholderSrc={img} />
               <div className="p-5 ">
                 <div className="font-[500] text-[18px] leading-[22.97px] mt-[12px] text-black2 dark:text-white">
                   {title}
                 </div>
-                <p className="text-gray text-[14px] leading-[20.42px]">
+                <p className="text-gray text-[14px] mt-2 leading-[20.42px]">
                   {subtitle}
                 </p>
                 <p className="mt-[12px] text-[#222222] dark:text-white2">

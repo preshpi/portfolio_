@@ -6,6 +6,7 @@ import {
   FaGithub,
   FaShareAlt,
 } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { FloatButton } from "antd";
 const Socials = () => {
@@ -51,7 +52,7 @@ const Socials = () => {
               className="dark:bg-white hover:opacity-75"
             />
           </a>
-          <a href="https://twitter.com/preshdevvvv" target="_blank">
+          <a href="https://twitter.com/preshdevvv" target="_blank">
             <FloatButton
               icon={<FaTwitter />}
               className="dark:bg-white hover:opacity-75"
@@ -63,6 +64,12 @@ const Socials = () => {
           >
             <FloatButton
               icon={<FaTiktok />}
+              className="dark:bg-white hover:opacity-75"
+            />
+          </a>
+          <a href="https://www.instagram.com/preshdevvv/" target="_blank">
+            <FloatButton
+              icon={<BsInstagram />}
               className="dark:bg-white hover:opacity-75"
             />
           </a>

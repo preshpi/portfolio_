@@ -1,14 +1,12 @@
 import React from "react";
-import Socials from "./Socials"
+import Socials from "./Socials";
 function Footer() {
   return (
     <>
       <Socials />
-      <div className="sticky top-[100%] flex flex-col justify-center items-center border-t dark:border-resume border-darkgrey">
-        <p className="text-darkgrey dark:text-resume py-2 px-2">
-          © 2023 PreshDev.
-        </p>
-        <p className="text-darkgrey dark:text-resume py-2 px-2">
+      <div className="sticky top-[100%] text-xs md:text-[14px] flex py-3 gap-2 justify-center items-center border-t dark:border-resume border-darkgrey">
+        <p className="text-darkgrey dark:text-resume ">© 2024 PreshDev.</p>
+        <p className="text-darkgrey dark:text-resume">
           Designed by{" "}
           <span className="underline">
             {" "}
