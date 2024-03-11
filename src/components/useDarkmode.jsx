@@ -2,18 +2,17 @@ import { React, useState, useEffect } from "react";
 import { BiSun, BiMoon } from "react-icons/bi";
 
 function useDarkmode() {
-
-  // It exports a function useDarkmode 
-  // that uses the useState and useEffect hooks to handle 
-  // switching between dark and light mode, and storing the 
+  // It exports a function useDarkmode
+  // that uses the useState and useEffect hooks to handle
+  // switching between dark and light mode, and storing the
   // theme in the local storage.
-  // It also uses the onClick event handler on a 
-  // button to trigger the handleThemeSwitch function that 
-  // changes the theme. And it uses the BiSun and 
-  // BiMoon components to display the appropriate icon depending 
+  // It also uses the onClick event handler on a
+  // button to trigger the handleThemeSwitch function that
+  // changes the theme. And it uses the BiSun and
+  // BiMoon components to display the appropriate icon depending
   // on the theme.
 
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || null);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || null);
 
   const handleThemeSwitch = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
@@ -40,19 +39,17 @@ function useDarkmode() {
     }
   }, [theme]);
   return (
-    <div>
-      <button onClick={handleThemeSwitch}>
-        {theme === "dark" ? (
-          <div className="w-[40px] h-[40px] grid place-items-center justify-center items-center rounded-full drop-shadow-lg shadow-white bg-white text-darkgrey">
-            <BiSun />
-          </div>
-        ) : (
-          <div className="w-[40px] h-[40px] grid place-items-center justify-center items-center rounded-full drop-shadow-lg shadow-darkgrey bg-white text-darkgrey">
-            <BiMoon />
-          </div>
-        )}
-      </button>
-    </div>
+    <button onClick={handleThemeSwitch}>
+      {theme === "dark" ? (
+        <div className="w-[40px] h-[40px] grid place-items-center justify-center items-center rounded-full drop-shadow-lg shadow-white bg-white text-darkgrey">
+          <BiSun />
+        </div>
+      ) : (
+        <div className="w-[40px] h-[40px] grid place-items-center justify-center items-center rounded-full drop-shadow-lg shadow-darkgrey bg-white text-darkgrey">
+          <BiMoon />
+        </div>
+      )}
+    </button>
   );
 }
 

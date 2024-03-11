@@ -26,8 +26,13 @@ const Socials = () => {
   };
 
   return (
-    <div className="mt-[35px] grid lg:justify-start justify-center  lg:items-start items-center">
-      <FloatButton.Group trigger="click" type="default" icon={<FaShareAlt />}>
+    <div className="grid lg:justify-start justify-center  lg:items-start items-center">
+      <FloatButton.Group
+        trigger="click"
+        type="default"
+        icon={<FaShareAlt />}
+        className="mx-3"
+      >
         <motion.div
           variants={socialcontainer}
           initial="hidden"
@@ -38,10 +43,7 @@ const Socials = () => {
             href="https://www.linkedin.com/in/preciousegwuenu/"
             target="_blank"
           >
-            <FloatButton
-              icon={<FaLinkedinIn />}
-              className="dark:bg-white hover:opacity-75"
-            />
+            <FloatButton icon={<FaLinkedinIn />} className="dark:bg-white" />
           </a>
           <a href="https://github.com/preshpi" target="_blank">
             <FloatButton

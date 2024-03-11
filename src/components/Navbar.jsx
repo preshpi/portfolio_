@@ -2,66 +2,32 @@ import { React } from "react";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div>
-      <ul className="grid w-[200px] items-center space-y-4">
-        <li>
-          <NavLink to="/" className="flex items-center space-x-8">
-          <div className="h-[2px] w-16 bg-primary dark:bg-gray navline"></div>
+    <div className="dark:text-resume text-secondary fixed left-0 md:left-6 top-0 z-50 h-screen flex flex-col items-center justify-between">
+      <div className="w-0.5 h-36 dark:bg-resume bg-secondary"></div>
+      <ul className="h-60 flex flex-col justify-between items-center">
+        <li className="list-none navbar -rotate-90">
+          <NavLink to="/">
+            <p className="text-xs font-semibold uppercase navtext">About</p>
+          </NavLink>
+        </li>
 
-            <p className="lg:text-[16px] lg:leading-[20.42px] mx-3 font-[700] uppercase navtext">
-              About
-            </p>
-          </NavLink>
-        </li> 
-        <li>
-          <NavLink to="/skills" className="flex items-center space-x-8">
-            <div className="h-[2px] w-16 bg-primary dark:bg-gray navline"></div>
-            <p className="lg:text-[16px] lg:leading-[20.42px] font-[700] mx-3  uppercase navtext">
-              Skills
-            </p>
+        <li className="list-none navbar -rotate-90">
+          <NavLink to="/skills">
+            <p className="text-xs font-[700] uppercase navtext">Skills</p>
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/projects" className="flex items-center space-x-8">
-            <div className="h-[2px] w-16 bg-primary dark:bg-gray navline"></div>
-            <p className="lg:text-[16px] lg:leading-[20.42px] font-[700] mx-3  uppercase navtext">
-              Project
-            </p>
+        <li className="list-none navbar -rotate-90">
+          <NavLink to="/projects">
+            <p className="text-xs font-[700] uppercase navtext">Project</p>
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/contact" className="flex items-center space-x-8">
-            <div className="h-[2px] w-16 bg-primary dark:bg-gray navline"></div>
-            <p className="lg:text-[16px] lg:leading-[20.42px] font-[700] mx-3  uppercase navtext">
-              Contact
-            </p>
+        <li className="list-none navbar -rotate-90">
+          <NavLink to="/contact">
+            <p className="text-xs font-[700] uppercase navtext">Contact</p>
           </NavLink>
-        </li>
-        <li>
-          <a
-            href="https://preshblog.vercel.app/"
-            target="_blank"
-            className="flex items-center space-x-8"
-          >
-            <div className="h-[2px] w-16 bg-primary dark:bg-gray navline"></div>
-            <p className="lg:text-[16px] lg:leading-[20.42px] font-[700] mx-3  uppercase navtext">
-              Blog
-            </p>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://preshpie.notion.site/Video-Editing-Portfolio-ea5a25af009a4423a444f0793132f244?pvs=4"
-            target="_blank"
-            className="flex items-center space-x-8"
-          >
-            <div className="h-[2px] w-16 bg-primary dark:bg-gray navline"></div>
-            <p className="lg:text-[16px] lg:leading-[20.42px] font-[700] mx-3  uppercase navtext">
-              Videos
-            </p>
-          </a>
         </li>
       </ul>
+      <div className="w-0.5 h-36 dark:bg-resume bg-secondary"></div>
     </div>
   );
 };

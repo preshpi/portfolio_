@@ -20,6 +20,7 @@ const MobileContact = lazy(() => import("./pages/Contact/MobileContact"));
 
 import UseDarkmode from "./components/useDarkmode";
 import Error404 from "./pages/Error404";
+import AboutPage from "./pages/About/AboutPage";
 
 function Loading() {
   return (
@@ -37,11 +38,26 @@ function App() {
       {/* Large screen */}
 
       <div className="h-screen bg-resume overflow-y-scroll dark:bg-bgblack transition-colors duration-300 lg:block hidden">
-        <div className="w-full h-14 flex items-end justify-end pt-4 px-2">
-          <UseDarkmode />
-          <Socials />
+        <div className="h-full flex items-center justify-center p-5">
+          <Navbar />
+          <div className="w-full h-full ">
+            <Routes location={location} key={location.key}>
+              <Route
+                path="/"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <AboutPage />
+                  </Suspense>
+                }
+              />
+            </Routes>
+          </div>
+          <div className="flex items-end h-full justify-between flex-col">
+            <UseDarkmode />
+            <Socials />
+          </div>
         </div>
-        <div className="flex items-center justify-center">
+        {/* <div className="flex items-center justify-center">
           <div className="flex w-[80%] h-[100%] items-center justify-center">
             <div className="w-1/2 overflow-auto">
               <>
@@ -131,7 +147,7 @@ function App() {
               </>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* small screen & tablet */}

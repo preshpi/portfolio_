@@ -91,34 +91,36 @@ const About = () => {
       animate={controls}
       exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
     >
-      <Carousel autoplay effect="fade" dots={false}>
-        {initals.map(({ id, text, data }) => {
-          return (
-            <div className="w-full" key={id}>
-              <div className="relative w-[460px] group flex justify-center mx-auto">
-                <span className="absolute inset-0 w-[460px] h-[460px] border-2 border-darkgrey dark:border-white translate-y-4 translate-x-4"></span>
-                <div className="w-[460px] h-[460px] bg-darkgrey dark:bg-white flex items-center justify-center">
-                  <h1 className="text-[256px] font-[700] text-white dark:text-darkgrey">
-                    {text}
-                  </h1>
+      <div className="max-w-[500px]">
+        <Carousel autoplay effect="fade" dots={false}>
+          {initals.map(({ id, text, data }) => {
+            return (
+              <div className="w-full h-full" key={id}>
+                <div className="relative group flex justify-center mx-auto">
+                  <span className="absolute inset-0 w-[350px] h-[330px] border-2 border-darkgrey dark:border-white translate-y-4 translate-x-14"></span>
+                  <div className="w-[350px] h-[330px] bg-darkgrey dark:bg-white flex items-center justify-center">
+                    <h1 className="text-[226px] font-[700] text-white dark:text-darkgrey">
+                      {text}
+                    </h1>
+                  </div>
+                </div>
+                <div className="gap-x-[44px] gap-y-[5px] py-4 flex flex-wrap justify-center">
+                  {data.map(({ txt, id }) => {
+                    return (
+                      <div
+                        key={id}
+                        className="w-[54px] h-[54px]  bg-white text-black2 font-[700] text-[24px] mt-[35px] leading-[30.62px] grid justify-center items-center place-items-center"
+                      >
+                        <p>{txt}</p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
-              <div className="gap-x-[44px] gap-y-[5px] py-4 flex flex-wrap justify-center">
-                {data.map(({ txt, id }) => {
-                  return (
-                    <div
-                      key={id}
-                      className="w-[64px] h-[64px]  bg-white text-black2 font-[700] text-[24px] mt-[35px] leading-[30.62px] grid justify-center items-center place-items-center"
-                    >
-                      <p>{txt}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-      </Carousel>
+            );
+          })}
+        </Carousel>
+      </div>
     </motion.div>
   );
 };

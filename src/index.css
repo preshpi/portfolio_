@@ -6,17 +6,36 @@ body {
   font-family: "Space Grotesk", sans-serif;
 }
 
-.active .navline {
-  width: 7rem;
-}
-
 .active .navtext {
-  font-weight: 800;
-  color: rgb(67, 64, 64);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
 }
 
 .navtext {
-  color: #5d5a5a;
+  position: relative;
+}
+
+.navtext::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1a1a1a;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.navtext:hover::before {
+  width: 100%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navtext a:not(.active):hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }
 
 span {
