@@ -12,7 +12,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="w-[80%] mx-auto lg:overflow-auto lg:h-[600px]"
+      className="py-12 px-5 overflow-y-scroll lg:h-[450px]"
       initial={{ opacity: 0 }}
       animate={controls}
       exit={{ opacity: 0, transition: { ease: "easeInOut" } }}

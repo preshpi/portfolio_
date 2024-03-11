@@ -15,6 +15,7 @@ const Heroskills = () => {
       initial={{ opacity: 0 }}
       animate={controls}
       exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
+      className="max-w-[500px]"
     >
       <p className="text-primary dark:text-gray text-[48px] leading-[64px] font-[700]">
         {header.map((letter, index) => {

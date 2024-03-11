@@ -21,6 +21,9 @@ const MobileContact = lazy(() => import("./pages/Contact/MobileContact"));
 import UseDarkmode from "./components/useDarkmode";
 import Error404 from "./pages/Error404";
 import AboutPage from "./pages/About/AboutPage";
+import SkillsPage from "./pages/Skills/SkillsPage";
+import ContactPage from "./pages/Contact/ContactPage";
+import ProjectPage from "./pages/Projects/ProjectPage";
 
 function Loading() {
   return (
@@ -47,6 +50,30 @@ function App() {
                 element={
                   <Suspense fallback={<Loading />}>
                     <AboutPage />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/skills"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <SkillsPage />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <ContactPage />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/projects"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <ProjectPage />
                   </Suspense>
                 }
               />

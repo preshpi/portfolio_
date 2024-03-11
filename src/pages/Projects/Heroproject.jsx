@@ -13,6 +13,7 @@ const Heroproject = () => {
       initial={{ opacity: 0 }}
       animate={controls}
       exit={{ opacity: 0, transition: { ease: "easeInOut" } }}
+      className="max-w-[500px]"
     >
       <span className="text-primary dark:text-gray  lg:text-[48px] lg:leading-[64px] font-[700] w-[409px]">
         {header.map((letter, index) => {
