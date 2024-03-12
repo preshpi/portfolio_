@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "@sanity/client": "^6.15.3",
     "antd": "^5.1.6",
     "framer-motion": "^8.5.2",
     "prettier": "^2.8.2",
