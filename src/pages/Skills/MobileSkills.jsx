@@ -128,7 +128,7 @@ function MobileSkills() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center mt-[40px]">
+      <div className="flex justify-center items-center mt-[40px] pb-5">
         <ul className="grid grid-cols-2 md:grid-cols-3 gap-x-[24px] space-y-3">
           {data.map(({ id, icons, text, color }) => (
             <li
