@@ -1,15 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import resume from "../../data/PreshDevResume.pdf";
 import { IoLogoHtml5 } from "react-icons/io";
 import { ImGit } from "react-icons/im";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiTypescript, SiTailwindcss } from "react-icons/si";
+import { SiTypescript, SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { IoLogoSass } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { DiCss3Full, DiJavascript1 } from "react-icons/di";
 import { motion } from "framer-motion";
 import useAnimationHook from "../../components/useAnimationHook";
-
+import { data } from "./Skills";
 function MobileSkills() {
   const controls = useAnimationHook();
 
@@ -64,7 +63,7 @@ function MobileSkills() {
     },
     {
       id: 9,
-      icons: <TbBrandNextjs />,
+      icons: <SiNextdotjs />,
       text: "NextJS",
       color: "#111",
     },
@@ -128,28 +127,34 @@ function MobileSkills() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center mt-[40px] pb-5">
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-x-[24px] space-y-3">
-          {data.map(({ id, icons, text, color }) => (
-            <li
-              id={id}
-              key={id}
-              className="w-[163px] h-[77px] mt-3 bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300"
-            >
-              <span className="flex gap-[16px] w-[101px] justify-evenly">
-                <span className="w-[35px] h-[35px]">
-                  {React.cloneElement(icons, { color: color, size: 24 })}
-                </span>
-                <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px]">
-                  {text}
-                </p>
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <SkillsData />
     </motion.div>
   );
 }
 
 export default MobileSkills;
+
+export const SkillsData = () => {
+  return (
+    <div className="flex justify-center items-center mt-[40px] lg:mt-[0] pb-5">
+      <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-x-[24px] space-y-3">
+        {data.map(({ id, icons, text, color }) => (
+          <li
+            id={id}
+            key={id}
+            className="w-[163px] h-[77px] mt-3 bg-white dark:bg-darkgrey flex justify-center items-center  hover:scale-95 shadow-md transition-all duration-300"
+          >
+            <div className="flex gap-[16px] justify-between items-center">
+              <span className="w-[35px] h-[35px] flex items-center">
+                {React.cloneElement(icons, { color: color, size: 24 })}
+              </span>
+              <p className="flex justify-center items-center text-[14px] text-black2 dark:text-white leading-[19px]">
+                {text}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
