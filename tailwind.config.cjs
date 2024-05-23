@@ -9,6 +9,12 @@ module.exports = {
       lg: "1200px",
       xl: "1440px",
     },
+    extend: {
+      textShadow: {
+        custom:
+          "0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 120px #fff",
+      },
+    },
     colors: {
       primary: "#494949",
       secondary: "#1A1A1A",
@@ -26,9 +32,15 @@ module.exports = {
       blacktoggle: "#0D0C0C",
       gray: "#B2B2B3",
     },
-    extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".text-shadow-custom": {
+          textShadow:
+            "0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 120px #fff",
+        },
+      });
+    },
+  ],
 };
-
-

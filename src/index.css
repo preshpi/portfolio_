@@ -6,11 +6,6 @@ body {
   font-family: "Space Grotesk", sans-serif;
 }
 
-.active .navtext {
-  text-decoration: line-through;
-  text-decoration-thickness: 1px;
-}
-
 .navtext {
   position: relative;
 }
@@ -30,6 +25,15 @@ body {
   width: 100%;
 }
 
+.textGlow {
+  color: #cfcfcf;
+}
+
+.textGlow:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff,
+    0 0 120px #fff;
+}
 @media (hover: hover) and (pointer: fine) {
   .navtext a:not(.active):hover::before {
     left: 0;
