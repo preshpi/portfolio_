@@ -10,6 +10,7 @@ import { client } from "../../client";
 const Projects = () => {
   const controls = useAnimationHook();
   const [projectData, setProjectData] = useState([]);
+
   useEffect(() => {
     client
       .fetch(
